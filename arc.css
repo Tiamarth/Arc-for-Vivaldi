@@ -1,0 +1,371 @@
+/* I wrote this CSS to make Vivaldi integrate with
+ * the arc theme for Linux, but I have had few issues
+ * running it with other themes so far.
+ * 
+ * Author: Tiamarth <thatiamarth+inq@gmail.com>, <http://tiamarth.com/>;
+ * 
+ */
+
+/* use custom fonts in Vivaldi's UI */
+/* on Linux, Vivaldi's default font is Ubuntu */
+@font-face {
+    font-family: 'SNFS';
+    src: url('https://github.com/supermarin/YosemiteSanFranciscoFont/blob/master/System%20San%20Francisco%20Display%20Regular.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro|Source+Sans+Pro|Ubuntu');
+
+* {
+    /* Yosemite San Francisco, uncomment to use */
+    /*font-family: 'SNFS', sans-serif;*/
+    /* Roboto, enabled here by default */
+    font-family: 'Roboto', sans-serif;
+    /* Ubuntu, uncomment to use */
+    /*font-family: 'Ubuntu', sans-serif;*/
+    /* Source Code Pro, uncomment to use */
+    /*font-family: 'Source Code Pro', monospace;*/
+    /* Source Sans Pro, uncomment to use */
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+}
+
+/* remove vivaldi's header gradient, arc is a flat theme */
+
+body {--colorAccentBgDark:var(--colorAccentBg) !important;}
+
+/* add a dynamic 1px window border that persists when native window is disabled */
+#browser {
+    padding-top: 0;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+}
+
+#browser.maximized,#browser.fullscreen {padding: 0;}
+
+/* hide title bar when GUI is hidden */
+#browser.address-off.tabs-off.bookmark-bar-off #header {display: none;}
+
+/* small animation when buttons get hovered */
+.button-toolbar,
+.button-toolbar:hover,
+.button-category,
+.button-category:hover,
+.bookmark-bar button,
+.bookmark-bar button:hover,
+#panel_switch,
+#panel_switch:hover,
+#switch button,
+#switch button:hover,
+#footer button,
+#footer button:hover {
+    transition: 0.3s !important;
+}
+
+.button-toolbar,
+.button-category,
+.bookmark-bar button,
+#panel_switch,
+#switch button,
+#footer button {
+    transition-delay: 0.1s !important;
+}
+
+.bookmark-bar button:hover {border: initial !important;}
+
+#browser.theme-light .button-toolbar:hover,
+#browser.theme-light .bookmark-bar button:hover,
+#browser.theme-light.acc-dark.color-behind-tabs-on .button-toolbar:hover,
+#browser.theme-light.acc-dark.color-behind-tabs-on .bookmark-bar button:hover,
+#browser.theme-light.acc-dark.color-behind-tabs-on #footer button:hover {
+    background: var(--colorBgLightIntense); !important;
+}
+
+#browser.theme-dark .button-toolbar:hover,
+#browser.theme-dark .bookmark-bar button:hover,
+#browser.theme-dark #footer {
+    background: var(--colorAccentBgDarker) !important;
+}
+
+/* reset animations of buttons that aren't on toolbars */
+#panels .panel-group .panel .button-toolbar:hover,
+#webpage-stack .active.internal.visible.webpageview .internal-page .settings-content .button-toolbar:hover {
+    background: var(--colorBg) !important;
+    transition: initial !important;
+    transition-delay: initial !important;
+
+}
+
+/* arc new tab button */
+.newtab {
+    margin-left: -1px;
+    transition: background 0.3s;
+}
+
+.newtab:hover,.acc-dark.color-behind-tabs-on .newtab:hover {
+    background: var(--colorBgLightIntense);
+    border-radius: 0;
+}
+
+.acc-dark.color-behind-tabs-on .newtab:hover {background: var(--colorAccentBgFadedMost);}
+
+.newtab svg {border-radius: 0 !important;}
+
+/* remove background on window buttons */
+.window-buttongroup button {
+    width: 30px;
+    background-color: rgba(0,0,0,0) !important;
+}
+
+.window-buttongroup button:hover {background-color: rgba(0,0,0,0) !important;}
+
+.window-buttongroup button:active {background-color: rgba(0,0,0,0) !important;}
+
+.isblurred #browser .window-buttongroup img {opacity: 0.3;}
+
+/* position window buttons according to arc window buttons */
+.window-minimize {margin-right: 5px !important;}
+
+.window-maximize {margin-right: 5px !important;}
+
+.window-close {margin-right: -7px !important;}
+
+/* hide default window buttons svgs
+ * remove from this comment down to line 245 if you don't want to use arc's window buttons
+ */
+.window-buttongroup svg {display: none;}
+
+/* apply arc window buttons */
+.window-minimize { /* minimize */
+    background: url('arc/titlebutton-minimize.png') no-repeat;
+}
+
+.window-maximize { /* maximize */
+    background: url('arc/titlebutton-maximize.png') no-repeat;
+}
+
+.window-close { /* close */
+    background: url('arc/titlebutton-close.png') no-repeat;
+}
+
+/* on hover */
+.window-minimize:hover { /* minimize */
+    background: url('arc/titlebutton-minimize-hover.png') no-repeat !important;
+}
+
+.window-maximize:hover { /* maximize */
+    background: url('arc/titlebutton-maximize-hover.png') no-repeat !important;
+}
+
+.window-close:hover { /* close */
+    background: url('arc/titlebutton-close-hover.png') no-repeat !important;
+}
+
+/* on hover:active */
+.window-minimize:hover:active { /* minimize */
+    background: url('arc/titlebutton-minimize-active.png') no-repeat !important;
+}
+
+.window-maximize:hover:active { /* maximize */
+    background: url('arc/titlebutton-maximize-active.png') no-repeat !important;
+}
+
+.window-close:hover:active { /* close */
+    background: url('arc/titlebutton-close-active.png') no-repeat !important;
+}
+
+/* on dark theme */
+.acc-dark .window-minimize,.theme-dark .window-minimize { /* minimize */
+    background: url('arc/titlebutton-minimize-dark.png') no-repeat;
+}
+
+.acc-dark .window-maximize,.theme-dark .window-maximize { /* maximize */
+    background: url('arc/titlebutton-maximize-dark.png') no-repeat;
+}
+
+.acc-dark .window-close,.theme-dark .window-close { /* close */
+    background: url('arc/titlebutton-close-dark.png') no-repeat;
+}
+
+/* on dark theme:hover */
+.acc-dark .window-minimize:hover,.theme-dark .window-minimize:hover { /* minimize */
+    background: url('arc/titlebutton-minimize-hover-dark.png') no-repeat !important;
+}
+
+.acc-dark .window-maximize:hover,.theme-dark .window-maximize:hover { /* maximize */
+    background: url('arc/titlebutton-maximize-hover-dark.png') no-repeat !important;
+}
+
+.acc-dark .window-close:hover,.theme-dark .window-close:hover { /* close */
+    background: url('arc/titlebutton-close-hover-dark.png') no-repeat !important;
+}
+
+/* on dark theme:hover:active */
+.acc-dark .window-minimize:hover:active,.theme-dark .window-minimize:hover:active { /* minimize */
+    background: url('arc/titlebutton-minimize-active-dark.png') no-repeat !important;
+}
+
+.acc-dark .window-maximize:hover:active,.theme-dark .window-maximize:hover:active { /* maximize */
+    background: url('arc/titlebutton-maximize-active-dark.png') no-repeat !important;
+}
+
+.acc-dark .window-close:hover:active,.theme-dark .window-close:hover:active { /* close */
+    background: url('arc/titlebutton-close-active-dark.png') no-repeat !important;
+}
+
+/* on inactive window:base */
+.isblurred .window-minimize { /* minimize */
+    background: url('arc/titlebutton-minimize-backdrop.png') no-repeat;
+}
+
+.isblurred .window-maximize { /* maximize */
+    background: url('arc/titlebutton-maximize-backdrop.png') no-repeat;
+}
+
+.isblurred .window-close { /* close */
+    background: url('arc/titlebutton-close-backdrop.png') no-repeat;
+}
+
+/* on inactive window:dark */
+.acc-dark.isblurred .window-minimize,.theme-dark.isblurred .window-minimize { /* minimize */
+    background: url('arc/titlebutton-minimize-backdrop-dark.png') no-repeat;
+}
+
+.acc-dark.isblurred .window-maximize,.theme-dark.isblurred .window-maximize { /* maximize */
+    background: url('arc/titlebutton-maximize-backdrop-dark.png') no-repeat;
+}
+
+.acc-dark.isblurred .window-close,.theme-dark.isblurred .window-close { /* close */
+    background: url('arc/titlebutton-close-backdrop-dark.png') no-repeat;
+}
+
+/* move tab bin 19px to the left */
+.toggle-trash {margin-right: 19px;}
+
+/* blue tab stack indicators */
+.tab-group-indicator {background: var(--colorBg);}
+
+.color-behind-tabs-on .tab-group-indicator {background: var(--colorAccentBg);}
+
+.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator,
+.color-behind-tabs-on.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator {
+    border-top: none;
+    margin-bottom: -2px;
+    background-color: #5294e2 !important;
+}
+
+.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator:hover {background-color: #bcd6f5 !important;}
+
+.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator.active,
+.stacks-on .tab-strip .tab.active .tab-group-indicator .tab-indicator.active,
+.stacks-on .tab-strip .tab:hover:not(.active) .tab-group-indicator .tab-indicator.active,
+.color-behind-tabs-on.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator.active {
+    background-color: #88B7F0 !important;
+}
+
+.tabs-top.tabs-at-edge.maximized.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator.active {padding-bottom: 0;}
+
+/* arc style scrollbars, for these scrollbars universally: https://userstyles.org/styles/142645/arc-scrollbars */
+#browser ::-webkit-scrollbar {
+    width: 9px !important;
+    height: 9px !important;
+}
+
+#browser ::-webkit-scrollbar-button {display: none !important;}
+
+#browser ::-webkit-scrollbar-track {background-color: transparent !important;}
+
+#browser ::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.35) !important;
+    border: rgba(211,218,227,0.5) solid 1px !important;
+    -webkit-border-radius: 20px !important;
+}
+
+#browser ::-webkit-scrollbar-thumb:hover {
+    border: none !important;
+    background: rgba(119,119,119,0.5) !important;
+}
+
+#browser ::-webkit-scrollbar-thumb:active {
+    border: none !important;
+    background: #5294e2 !important;
+}
+
+/* dark panel on all themes */
+#panel_switch,#switch {box-shadow: inset -1px 0 #353945 !important;}
+
+#panel_switch,#switch,#panels-container:after {background: #353945;}
+
+#panels-container:after {border-right: 1px solid rgba(0,0,0,0.35) !important;}
+
+#panel_switch polygon,#switch button svg {fill: #d3dae3 !important;}
+
+#switch button.active svg {fill: var(--colorFg) !important;}
+
+#switch button.active,
+#switch button.active:hover {
+    background-color: var(--colorBgLightIntense) !important;
+}
+
+.theme-dark #switch .webviewbtn img,
+#switch button {
+    border: 0;
+    background: transparent !important;
+}
+
+#panel_switch:hover,#switch button:hover {background: #494D5A !important;}
+
+/* make speed dial navigation smaller */
+.startpage-navigation {min-height: 34px !important;}
+
+/* dark speed dial navigation unless light theme with light accent */
+.acc-dark button.button-startpage.active,
+.acc-dark .startpage .startpage-navigation,
+.theme-dark button.button-startpage.active,
+.theme-dark .startpage .startpage-navigation {
+    background: #353945;
+    color: #cdd6db;
+}
+
+.acc-dark .startpage .startpage-navigation,
+.theme-dark .startpage .startpage-navigation {
+    box-shadow: inset 0 -2px 0 #2f343f;
+}
+
+/* use arc colors for stats info overlay */
+#footer.footer > #status_info > span {
+    border: initial;
+    color: var(--colorFg);
+    background: initial;
+}
+
+#status_info > span {
+    border: 0;
+    color: #fff;
+    background: #5294e2;
+}
+
+/* use arc sidebar color in vivaldi's settings dialog */
+.button-category:hover {background: #494D5A !important;}
+
+.settings-search {
+    background: #292E39;
+    border-width: 0 !important;
+    box-shadow: inset 0 0 2px black !important;
+}
+
+.vivaldi-settings .settings-sidebar {
+    color: #d3dae3;
+    background: #353945 !important;
+}
+
+.vivaldi-settings .settings-sidebar svg {fill: #fff;}
+
+.button-category:focus:not([tabindex='-1']),
+.button-category:focus:not([tabindex='-1']) svg,
+.settings-sidebar .settings-navigation .navigation-category.category-selected .button-category.category-full-selected,
+.settings-sidebar .settings-navigation .navigation-category.category-selected .button-category.category-full-selected svg {
+    color: var(--colorFg);
+    fill: var(--colorHighlightBg);
+    background: var(--colorBgLightIntense) !important;
+    transition: initial !important;
+}

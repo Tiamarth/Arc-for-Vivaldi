@@ -1,0 +1,111 @@
+05/31/17 - 3.1 : 'github'
+
+* moved project to Github
+
+05/29/17 - 3.0 : 'eye candy'
+
+- removed css to fix VB-28369, was fixed in browser
++ added additional optional fonts, Roboto is default
++ added a small white border to scrollbars to improve visibility on dark sites
+* made new tab button flush with tabs
+* used padding instead of border to create border
+- removed arc-window-controls.js, only css is necessary now
++ made speed dial navigation smaller
+- removed force arc colors on maximize window
++ made status overlay use arc colors
+* made window button css easier to read
+- removed some comments
++ small animation on button hover, mimicking arc
++ optional opera-like panel
+-- bug fixes --
+* fixed some svgs being hard to read on some backgrounds
+* made tab stack indicators a bit easier to see
+* aligned window buttons and tab bin more consistently
+* fixed close button not using correct color on grab
+* fixed .theme-light window buttons not using correct color on inactive window
+* fixed panel toggle being wrong color
+
+05/17/17 - 2.4.1
+
+* condensed panel code, removed some redundant css (thanks, luetage)
+* made scrollbars blue when grabbed
+
+05/17/17 - 2.4
+
++ added shadow back to panel, turns out it was preventing buttons from appearing to float when hovered
+- removed random #switch duplicate element
+* fixed fickle panel buttons
+
+05/16/17 - 2.3
+
+* added a small, semi-transparent border to the panel
+* fixed the sidebar in settings not using arc's sidebar color
+- removed unnecessary piece of code on line 156
+- removed shadow on panel
+* updated screenshots
++ added comparison screenshots
+
+05/16/17 - 2.1
+
+* fixed panel button drag grey background
+* fixed fickle window buttons
+\\ it is sometimes hard to tell where the edge of the panel is, specifically when the content behind it is the same color
+\\ the sidebar in the settings should inherit arc's sidebar color
+\\ there is an unnecessary piece of css on line 156 that targets only left-side panel and breaks box shadow
+\\ even though it is broken, there is a box shadow applied to panel when there should not be
+\\ mac user has reported panel button hover background turns grey
+
+05/16/17 - 2.0
+
++ made active tab in tab stacks a lighter blue than other tabs
++ added a simple fix for VB-28369
+* fixed window controls being too hard to see on light themes
+* removed vivaldi's header gradient
+* added support for arc's light variation
+* fixed light themes becoming dark on maximize
+* made all window buttons dim when window becomes inactive
+* fixed colors of base theme not always being loyal to arc
+* updated theme setting info on the site
+* improved the wording of installation instructions
+* updated screenshots
++ added screenshots for light arc
+\\ if a button in the panel is dragged, button background becomes grey
+\\ mac user has reported panel button hover background turns grey
+\\ the wrong window buttons are used when theme uses both dark bg and dark accent colors
+
+05/15/17 - 1.1
+
++ created this changelog
++ added roboto fonts in vivaldi interface
++ added forcing arc colors in maximized state
+* fixed svgs being too hard to read on certain colors
+* fixed border not always adjusting properly
+\\ arc window controls can be hard to see on light themes
+\\ vivaldi has a gradient when accent is set behind tabs that can't be toggled off in settings
+\\ arc has a light theme variant, afv does not provide support
+\\ afv causes light themes to become dark on maximize
+\\ only close button dims when window becomes inactive
+\\ colors of base theme not always loyal to arc
+
+05/14/17 - 1.0 : 'release'
+
++ made all svgs in the browser match fg color
++ made vivaldi render a border even when native window is disabled
++ made tab stack indicators arc-blue
++ made scrollbars better
+* fixed svgs in the panel not matching fg color
+\\ svgs can be difficult to read on certain colors
+\\ the border sometimes adjusts inconsistently when leaving maximized state
++ released
+
+05/10/17 - 0.2
+
++ made panel use arc's sidebar color
++ made start page navigation use arc's interface color
+\\ svgs in the panel are always slightly off-white
+
+05/01/17 - 0.1
+
++ made vivaldi use arc's window controls
++ made title bar display:none when interface is hidden
++ creation

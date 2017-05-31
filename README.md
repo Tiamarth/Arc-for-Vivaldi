@@ -50,8 +50,8 @@ Corner Rounding: 2px
 ### The rest:
 
 1. Put `arc.css` in `/resources/vivaldi/style`
-2. To use the opera panel addon, put 'opera-panel.css' in `/resources/vivaldi/style`
-3. To use Arc's window controls without Native Window enabled, put `/arc` in `/resources/vivaldi/style`
+2. To use the opera panel addon, put `opera-panel.css` in `/resources/vivaldi/style`
+3. To use Arc's window controls without Native Window enabled, put `/arc` in `/resources/vivaldi/style`  
     Alternatively, if you prefer, you could ignore this step and continue using Vivaldi's default window buttons. AFV removes their background, which makes them more minimal.
 4. Open `/resources/vivaldi/browser.html`
 5. In the `<head>`, paste the following:

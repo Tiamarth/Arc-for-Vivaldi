@@ -21,30 +21,30 @@ Because Vivaldi features a built-in theme editor, it is easier to create a custo
 
 ### Arc theme settings:
 
-Background: #f9f9fa
-Foreground: #5c616c
-Highlight: #5294e2
-Accent: #e7e8eb
-✔ Apply Accent Color to Window
-✔ Transparent Tabs
+Background: #f9f9fa  
+Foreground: #5c616c  
+Highlight: #5294e2  
+Accent: #e7e8eb  
+✔ Apply Accent Color to Window  
+✔ Transparent Tabs  
 Corner Rounding: 2px
 
 ### Arc Dark theme settings:
 
-Background: #2f343f
-Foreground: #d3dae3
-Highlight: #5294e2
-Accent: #424959
-✔ Transparent Tabs
+Background: #2f343f  
+Foreground: #d3dae3  
+Highlight: #5294e2  
+Accent: #424959  
+✔ Transparent Tabs  
 Corner Rounding: 2px
  
 ### Arc Darker theme settings:
 
-Background: #f5f6f7
-Foreground: #5c616c
-Highlight: #5294e2
-Accent: #2f343f
-✔ Apply Accent Color to Window
+Background: #f5f6f7  
+Foreground: #5c616c  
+Highlight: #5294e2  
+Accent: #2f343f  
+✔ Apply Accent Color to Window  
 Corner Rounding: 2px
  
 ### The rest:

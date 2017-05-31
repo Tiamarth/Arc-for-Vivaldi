@@ -1,6 +1,6 @@
 05/31/17 - 3.1 : 'github'
 
-* moved project to Github
+* project moved to Github
 
 05/29/17 - 3.0 : 'eye candy'
 

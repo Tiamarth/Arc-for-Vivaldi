@@ -1,6 +1,5 @@
-# Arc-for-Vivaldi
+# Arc-for-Vivaldi  
 [changelog](https://github.com/Tiamarth/Arc-for-Vivaldi/blob/master/changelog.txt) | last updated: 05/31/17 | current version: 3.1
-----
 
 Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc,](https://github.com/horst3180/Arc-theme) a wildly popular theme for Linux.
 

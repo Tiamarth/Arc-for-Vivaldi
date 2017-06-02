@@ -1,7 +1,6 @@
 # Arc-for-Vivaldi  
-[changelog](https://github.com/Tiamarth/Arc-for-Vivaldi/blob/master/changelog.txt) | last updated: 05/31/17 | current version: 3.1
 
-Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc,](https://github.com/horst3180/Arc-theme) a wildly popular theme for Linux.
+Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc,](https://github.com/horst3180/Arc-theme) a popular theme for Linux.
 
 ## Features:
 
@@ -16,7 +15,7 @@ Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc,](ht
 - Use Arc's toolbar color for start page navigation.
 - Optionally make the panel appear to merge with the Vivaldi menu icon, similar to Opera's panel.
 
-## Installation:
+----
 
 Because Vivaldi features a built-in theme editor, it is easier to create a custom Arc theme and then to use this CSS on top of that theme. This custom CSS is necessary to integrate with Arc because you cannot currently customize every aspect of Vivaldi from the editor.
 
@@ -48,55 +47,33 @@ Accent: #2f343f
 ✔ Apply Accent Color to Window  
 Corner Rounding: 2px
  
-### The rest:
-
-1. Put `arc.css` in `/resources/vivaldi/style`
-2. To use the opera panel addon, put `opera-panel.css` in `/resources/vivaldi/style`
-3. To use Arc's window controls without Native Window enabled, put `/arc` in `/resources/vivaldi/style`  
-    Alternatively, if you prefer, you could ignore this step and continue using Vivaldi's default window buttons. AFV removes their background, which makes them more minimal.
-4. Open `/resources/vivaldi/browser.html`
-5. In the `<head>`, paste the following:
-    <link rel="stylesheet" href="style/arc.css" />
-    <link rel="stylesheet" href="style/opera-panel.css" />
-6. The scrollbars will only affect Vivaldi's UI and, as far as I know, there's nothing I can do about this. But I wrote a user style that will affect web pages as well, and you can install it [here.](https://userstyles.org/styles/142645/arc-scrollbars)
-7. Relaunch Vivaldi.
-
 [AFV thread on the Vivaldi forums](https://forum.vivaldi.net/post/137297)
+[pre-github changelog](https://github.com/Tiamarth/Arc-for-Vivaldi/blob/master/changelog.txt) | current version: 3.1.1
 
 ## Screenshots:
 
 ### Themes with AFV css installed:
 
-Arc  
-![Arc](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc.png)
+[Arc](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc.png)
 
-Arc Dark  
-![Arc Dark](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-dark.png)
+[Arc Dark](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-dark.png)
 
-Arc Darker  
-![Arc Darker](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-darker.png)
+[Arc Darker](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-darker.png)
 
 ### Themes without AFV installed:
 
-Default  
-![Vivaldi default](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/default.png)
+[Vivaldi default](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/default.png)
 
-Arc  
-![Arc](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-nocss.png)
+[Arc](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-nocss.png)
 
-Arc Dark  
-![Arc Dark](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-dark-nocss.png)
+[Arc Dark](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-dark-nocss.png)
 
-Arc Darker  
-![Arc Darker](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-darker-nocss.png)
+[Arc Darker](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-darker-nocss.png)
 
 ### Side by side comparisons of themes with and without AFV installed:
 
-Arc  
-![Arc](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-compare.png)
+[Arc](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-compare.png)
 
-Arc Dark  
-![Arc Dark](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-dark-compare.png)
+[Arc Dark](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-dark-compare.png)
 
-Arc Darker  
-![Arc Darker](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-darker-compare.png)
+[Arc Darker](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-darker-compare.png)

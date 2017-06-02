@@ -19,7 +19,7 @@ Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc,](ht
 
 ### Linux
 
-1. Find `style` in your Vivaldi install directory. That should be something like `/opt/vivaldi-snapshot/resources/vivaldi/style`  
+1. Find `style` in your Vivaldi install directory. That should be something like `/opt/vivaldi/resources/vivaldi/style`  
 2. Save `arc.css` in the style folder. (You should be left with a path such as `resources/vivaldi/style/arc.css`)  
 3. If you want to use the opera panel addon, save `opera-panel.css` in style.  
 4. If you want to use the Arc window buttons instead of Vivaldi's default window buttons, save the `arc` folder in style as well.  

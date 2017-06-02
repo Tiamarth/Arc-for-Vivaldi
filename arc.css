@@ -8,6 +8,8 @@
  * - http://tiamarth.com/
  * - https://github.com/Tiamarth
  * 
+ * CURRENT VERSION: 3.1.2
+ * 
  * LICENSE: GNU General Public License v3.0 | https://github.com/Tiamarth/Arc-for-Vivaldi/blob/master/LICENSE
  * 
  */
@@ -19,13 +21,15 @@
     src: url('https://github.com/supermarin/YosemiteSanFranciscoFont/blob/master/System%20San%20Francisco%20Display%20Regular.ttf');
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro|Source+Sans+Pro|Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto|Source+Code+Pro|Source+Sans+Pro|Ubuntu');
 
 * {
     /* Yosemite San Francisco, uncomment to use */
     /*font-family: 'SNFS', sans-serif;*/
+    /* Lato, uncomment to use */
+    font-family: 'Lato', sans-serif;
     /* Roboto, enabled here by default */
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     /* Ubuntu, uncomment to use */
     /*font-family: 'Ubuntu', sans-serif;*/
     /* Source Code Pro, uncomment to use */
@@ -135,9 +139,8 @@ body {--colorAccentBgDark:var(--colorAccentBg) !important;}
 
 .window-close {margin-right: -7px !important;}
 
-/* hide default window buttons svgs
- * remove from this comment down to line 245 if you don't want to use arc's window buttons
- */
+/* hide default window buttons svgs */
+/* remove from this line down to line 245 if you don't want to use arc's window buttons */
 .window-buttongroup svg {display: none;}
 
 /* apply arc window buttons */

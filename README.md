@@ -47,7 +47,7 @@ Accent: #2f343f
 ✔ Transparent Tabs  
 Corner Rounding: 2px
  
-[AFV thread on the Vivaldi forums](https://forum.vivaldi.net/post/137297)
+[AFV thread on the Vivaldi forums](https://forum.vivaldi.net/post/137297)  
 [pre-github changelog](https://github.com/Tiamarth/Arc-for-Vivaldi/blob/master/changelog.txt) | current version: 3.1.1
 
 ## Screenshots:

@@ -69,33 +69,12 @@ Corner Rounding: 2px
 
 ## Screenshots:
 
-### Themes with AFV css installed:
+Themes with AFV css installed: [Arc](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc.png) | [Arc Dark](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-dark.png) | [Arc Darker](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-darker.png)
 
-[Arc](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc.png)
+Themes without AFV installed: [Vivaldi default](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/default.png) | [Arc](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-nocss.png) | [Arc Dark](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-dark-nocss.png) | [Arc Darker](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-darker-nocss.png)
 
-[Arc Dark](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-dark.png)
-
-[Arc Darker](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-darker.png)
-
-### Themes without AFV installed:
-
-[Vivaldi default](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/default.png)
-
-[Arc](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-nocss.png)
-
-[Arc Dark](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-dark-nocss.png)
-
-[Arc Darker](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-darker-nocss.png)
-
-### Side by side comparisons of themes with and without AFV installed:
-
-[Arc](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-compare.png)
-
-[Arc Dark](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-dark-compare.png)
-
-[Arc Darker](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-darker-compare.png)
+Side by side comparisons of themes with and without AFV installed: [Arc](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-compare.png) | [Arc Dark](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-dark-compare.png) | [Arc Darker](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-darker-compare.png)
 
 ----
 
-[AFV thread on the Vivaldi forums](https://forum.vivaldi.net/post/137297)  
-[pre-github changelog](https://github.com/Tiamarth/Arc-for-Vivaldi/blob/master/changelog.txt)
+[pre-github changelog](https://github.com/Tiamarth/Arc-for-Vivaldi/blob/master/changelog.txt) | [AFV thread on the Vivaldi forums](https://forum.vivaldi.net/post/137297)  

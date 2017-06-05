@@ -39,33 +39,15 @@ Now,
 
 **Note also:** *Because Vivaldi features a built-in theme editor, it is easier to create a custom Arc theme and then to use this CSS on top of that theme. This custom CSS is necessary to integrate with Arc because you cannot currently customize every aspect of Vivaldi from the editor. See below.*
 
-### Arc theme settings:
-
-Background: #e7e8eb  
-Foreground: #7a8b94  
-Highlight: #5294e2  
-Accent: #f9f9fa  
-✔ Transparent Tabs  
-Corner Rounding: 2px
-
-### Arc Dark theme settings:
-
-Background: #2f343f  
-Foreground: #d3dae3  
-Highlight: #5294e2  
-Accent: #383c4a  
-✔ Transparent Tabs  
-Corner Rounding: 2px
- 
-### Arc Darker theme settings:
-
-Background: #f5f6f7  
-Foreground: #7a8b94  
-Highlight: #5294e2  
-Accent: #2f343f  
-✔ Apply Accent Color to Window  
-✔ Transparent Tabs  
-Corner Rounding: 2px
+| Arc theme settings:              | Arc Dark theme settings:         | Arc Darker theme settings:       |
+| -------------------------------- | -------------------------------- | -------------------------------- |
+| Background: #e7e8eb              | Background: #2f343f              | Background: #f5f6f7              |
+| Foreground: #7a8b94              | Foreground: #d3dae3              | Foreground: #7a8b94              |
+| Highlight: #5294e2               | Highlight: #5294e2               | Highlight: #5294e2               |
+| Accent: #f9f9fa                  | Accent: #383c4a                  | Accent: #2f343f                  |
+| [ ] Apply Accent Color to Window | [ ] Apply Accent Color to Window | [x] Apply Accent Color to Window |
+| [x] Transparent Tabs             | [x] Transparent Tabs             | [x] Transparent Tabs             |
+| Corner Rounding: 2px             | Corner Rounding: 2px             | Corner Rounding: 2px             |
 
 ## Screenshots:
 

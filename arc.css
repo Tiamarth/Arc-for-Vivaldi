@@ -4,40 +4,16 @@
  * 
  * Author: Tiamarth
  * 
- * - thatiamarth+inq@gmail.com
+ * - tiabusy@gmail.com
  * - https://github.com/Tiamarth
  * - Tiamarth#6729
  * - http://tiamarth.com/
  * 
- * CURRENT VERSION: 3.1.2
+ * CURRENT VERSION: 3.5
  * 
  * LICENSE: GNU General Public License v3.0 | https://github.com/Tiamarth/Arc-for-Vivaldi/blob/master/LICENSE
  * 
  */
-
-/* use custom fonts in Vivaldi's UI */
-/* on Linux, Vivaldi's default font is Ubuntu */
-@font-face {
-    font-family: 'SNFS';
-    src: url('https://github.com/supermarin/YosemiteSanFranciscoFont/blob/master/System%20San%20Francisco%20Display%20Regular.ttf');
-}
-
-@import url('https://fonts.googleapis.com/css?family=Lato|Roboto|Source+Code+Pro|Source+Sans+Pro|Ubuntu');
-
-* {
-    /* Yosemite San Francisco, uncomment to use */
-    /*font-family: 'SNFS', sans-serif;*/
-    /* Lato, uncomment to use */
-    font-family: 'Lato', sans-serif;
-    /* Roboto, enabled here by default */
-    /*font-family: 'Roboto', sans-serif;*/
-    /* Ubuntu, uncomment to use */
-    /*font-family: 'Ubuntu', sans-serif;*/
-    /* Source Code Pro, uncomment to use */
-    /*font-family: 'Source Code Pro', monospace;*/
-    /* Source Sans Pro, uncomment to use */
-    /*font-family: 'Source Sans Pro', sans-serif;*/
-}
 
 /* remove vivaldi's header gradient, arc is a flat theme */
 
@@ -52,6 +28,8 @@ body {--colorAccentBgDark:var(--colorAccentBg) !important;}
 }
 
 #browser.maximized,#browser.fullscreen {padding: 0;}
+
+#browser.address-off.tabs-off.bookmark-bar-off {padding-top: 1px;}
 
 /* hide title bar when GUI is hidden */
 #browser.address-off.tabs-off.bookmark-bar-off #header {display: none;}
@@ -92,8 +70,7 @@ body {--colorAccentBgDark:var(--colorAccentBg) !important;}
 }
 
 #browser.theme-dark .button-toolbar:hover,
-#browser.theme-dark .bookmark-bar button:hover,
-#browser.theme-dark #footer {
+#browser.theme-dark .bookmark-bar button:hover {
     background: var(--colorAccentBgDarker) !important;
 }
 
@@ -106,7 +83,31 @@ body {--colorAccentBgDark:var(--colorAccentBg) !important;}
 
 }
 
-/* arc new tab button */
+/* make small black border under address bar more subtle */
+.toolbar-addressbar.toolbar:after {background-color: rgba(23, 27, 35, 0.2) !important;}
+
+.theme-dark .toolbar-addressbar.toolbar:after {background-color: rgba(23, 27, 35, 0.5) !important;}
+
+/* more contrast on tabs by adding shadows (as seen in official arc firefox theme) */
+/* shadow above navigation bar */
+#tabs-container {box-shadow: inset 0 -10px 1.7px -10px rgba(0,0,0,0.2);}
+
+.theme-dark #tabs-container {box-shadow: inset 0 -10px 3px -9px rgba(0,0,0,0.4);}
+
+/* build shadow around active tab */
+.tab-position .tab.active {
+    box-shadow: 0 -2px 2px rgba(0,0,0,0), /* top */
+    -1px -1px 0.2px rgba(0,0,0,0.1), /* left */
+    1px -1px 0.2px rgba(0,0,0,0.1); /* right */
+}
+
+.theme-dark .tab-position .tab.active {
+    box-shadow: 0px -2px 3px rgba(0,0,0,0.2), /* top */
+    -2.5px -1px 0.2px rgba(0,0,0,0.2), /* left */
+    2.5px -1px 0.2px rgba(0,0,0,0.2); /* right */
+}
+
+/* more uniform new tab button */
 .newtab {
     margin-left: -1px;
     transition: background 0.3s;
@@ -314,18 +315,25 @@ body {--colorAccentBgDark:var(--colorAccentBg) !important;}
 #switch button.active,
 #switch button.active:hover {
     background-color: var(--colorBgLightIntense) !important;
+    border: 1px rgba(0,0,0,0.5);
+    border-style: inset none inset none;
 }
 
 .theme-dark #switch .webviewbtn img,
 #switch button {
-    border: 0;
     background: transparent !important;
 }
 
 #panel_switch:hover,#switch button:hover {background: #494D5A !important;}
 
+/* remove black border on panel button hover */
+#switch button:hover:not(:disabled):not(.active) {box-shadow: initial;}
+
 /* make speed dial navigation smaller */
 .startpage-navigation {min-height: 34px !important;}
+
+/* remove white left border in speed dial navigation */
+.startpage .startpage-navigation .startpage-navigation-group:last-of-type {border-left: none;}
 
 /* dark speed dial navigation unless light theme with light accent */
 .acc-dark button.button-startpage.active,

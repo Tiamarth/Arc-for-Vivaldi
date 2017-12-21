@@ -1,11 +1,10 @@
 # Arc-for-Vivaldi  
 
-Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc,](https://github.com/horst3180/Arc-theme) a popular theme for Linux.
+Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc,](https://github.com/horst3180/Arc-theme) (or [Arc Grey](https://github.com/eti0/arc-grey-theme)) a popular theme for Linux.
 
 ## Features:
 
 - When the current theme is set to apply accent color to window, remove Vivaldi's header gradient.
-- Use custom fonts in Vivaldi's interface, by default AFV uses Roboto/
 - Dynamic 1px border around Vivaldi that persists even when Native Window is disabled in the settings.
 - Hide Vivaldi's built-in titlebar when GUI is hidden.
 - Use Arc's window buttons even when Native Window is disabled in the settings.
@@ -14,6 +13,7 @@ Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc,](ht
 - Use Arc's sidebar color even on light themes, unless using the opera panel addon.
 - Use Arc's toolbar color for start page navigation.
 - Optionally make the panel appear to merge with the Vivaldi menu icon, similar to Opera's panel.
+- Optionally integrate with [Arc Grey](https://github.com/eti0/arc-grey-theme) instead of vanilla Arc.
 
 ## Installation
 
@@ -25,13 +25,21 @@ First, find `style` in your Vivaldi install directory. It should be in the follo
 
 Now,
 
-1. Save `arc.css` in the style folder. (You should be left with a folder structure like this: `resources/vivaldi/style/arc.css`)  
-2. If you want to use the opera panel addon, save `opera-panel.css` in style.  
-3. If you want to use the Arc window buttons instead of Vivaldi's default window buttons, save the `arc` folder in style as well.  
-4. Open `resources/vivaldi/browser.html` in a text editor. Add the following to `<head>`  
-    `<link rel="stylesheet" href="style/arc.css" />`  
-   If you want to use the opera panel addon, also add:  
-    `<link rel="stylesheet" href="style/opera-panel.css" />`
+If you just want to **integrate with Arc,**    
+&nbsp; &nbsp; save `arc.css` in the style folder. (You should be left with a folder structure like this: `resources/vivaldi/style/arc.css`)    
+
+If you want to **integrate with arc-grey instead of Arc,**    
+&nbsp; &nbsp; save arc-grey.css in the same folder as `arc.css` and then open `resources/vivaldi/browser.html` in a text editor and add the following to `<head>`    
+`<link rel="stylesheet" href="style/arc.css" />`    
+`<link rel="stylesheet" href="style/arc-grey.css" />`    
+
+If you want to **use the opera panel addon,**    
+&nbsp; &nbsp; save `opera-panel.css` in the same folder as `arc.css` and then open `resources/vivaldi/browser.html` in a text editor and add the following to `<head>`    
+`<link rel="stylesheet" href="style/opera-panel.css" />`    
+
+If you want to **use the Arc window buttons** instead of Vivaldi's default window buttons,    
+&nbsp; &nbsp; save the `arc` folder in style as well, then open `resources/vivaldi/browser.html` in a text editor and add the following to `<head>`    
+`<link rel="stylesheet" href="style/arc.css" />`    
 
 **Note:** *You may like the way this theme generally looks but not want to use Arc's window buttons. If you'd prefer not to use Arc's window buttons, open `arc.css` in a text editor and find line 135 for instructions on how to not use them.*
 
@@ -45,6 +53,16 @@ Now,
 | Foreground: #7a8b94              | Foreground: #d3dae3              | Foreground: #7a8b94              |
 | Highlight: #5294e2               | Highlight: #5294e2               | Highlight: #5294e2               |
 | Accent: #f9f9fa                  | Accent: #383c4a                  | Accent: #2f343f                  |
+| [ ] Apply Accent Color to Window | [ ] Apply Accent Color to Window | [x] Apply Accent Color to Window |
+| [x] Transparent Tabs             | [x] Transparent Tabs             | [x] Transparent Tabs             |
+| Corner Rounding: 2px             | Corner Rounding: 2px             | Corner Rounding: 2px             |
+
+| Arc Grey theme settings:         | Arc Grey Dark theme settings:    | Arc Grey Darker theme settings:  |
+| -------------------------------- | -------------------------------- | -------------------------------- |
+| Background: #e8e8e8              | Background: #383838              | Background: #f5f5f5              |
+| Foreground: #757575              | Foreground: #dbdbdb              | Foreground: #6b6b6b              |
+| Highlight: #999999               | Highlight: #999999               | Highlight: #999999               |
+| Accent: #f5f5f5                  | Accent: #4a4a4a                  | Accent: #4a4a4a                  |
 | [ ] Apply Accent Color to Window | [ ] Apply Accent Color to Window | [x] Apply Accent Color to Window |
 | [x] Transparent Tabs             | [x] Transparent Tabs             | [x] Transparent Tabs             |
 | Corner Rounding: 2px             | Corner Rounding: 2px             | Corner Rounding: 2px             |

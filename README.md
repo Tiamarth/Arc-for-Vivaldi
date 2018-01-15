@@ -5,7 +5,7 @@ Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc,](ht
 ## Features:
 
 - When the current theme is set to apply accent color to window, remove Vivaldi's header gradient.
-- Dynamic 1px border around Vivaldi that persists even when Native Window is disabled in the settings.
+- 1px border around Vivaldi that persists even when Native Window is disabled in the settings.
 - Hide Vivaldi's built-in titlebar when GUI is hidden.
 - Use Arc's window buttons even when Native Window is disabled in the settings.
 - Make tab stack indicators Arc-blue, like running application indicators.
@@ -25,23 +25,17 @@ First, find `style` in your Vivaldi install directory. It should be in the follo
 
 Now,
 
-If you just want to **integrate with Arc,**    
-&nbsp; &nbsp; save `arc.css` in the style folder. (You should be left with a folder structure like this: `resources/vivaldi/style/arc.css`)    
+If you just want to **integrate with Arc,** save `arc.css` in the style folder. (You should be left with a folder structure like this: `resources/vivaldi/style/arc.css`)  
+Then open `resources/vivaldi/browser.html` in a text and add the following to `<head>`  
+`<link rel="stylesheet" href="style/arc.css" />`
 
-If you want to **integrate with arc-grey instead of Arc,**    
-&nbsp; &nbsp; save arc-grey.css in the same folder as `arc.css` and then open `resources/vivaldi/browser.html` in a text editor and add the following to `<head>`    
-`<link rel="stylesheet" href="style/arc.css" />`    
-`<link rel="stylesheet" href="style/arc-grey.css" />`    
+If you want to **integrate with arc-grey instead of Arc,** save `arc-grey.css` in the same folder as `arc.css` and then open `browser.html` again and add `<link rel="stylesheet" href="style/arc-grey.css" />` under the code from the last step.
 
-If you want to **use the opera panel addon,**    
-&nbsp; &nbsp; save `opera-panel.css` in the same folder as `arc.css` and then open `resources/vivaldi/browser.html` in a text editor and add the following to `<head>`    
-`<link rel="stylesheet" href="style/opera-panel.css" />`    
+If you want to **use the opera panel addon,** save `opera-panel.css` in the same folder as `arc.css` and then open `browser.html` again and add `<link rel="stylesheet" href="style/opera-panel.css" />` under the code from the first step.
 
-If you want to **use the Arc window buttons** instead of Vivaldi's default window buttons,    
-&nbsp; &nbsp; save the `arc` folder in style as well, then open `resources/vivaldi/browser.html` in a text editor and add the following to `<head>`    
-`<link rel="stylesheet" href="style/arc.css" />`    
+If you want to **use the Arc window buttons** instead of Vivaldi's default window buttons, save the `arc` folder in style as well.
 
-**Note:** *You may like the way this theme generally looks but not want to use Arc's window buttons. If you'd prefer not to use Arc's window buttons, open `arc.css` in a text editor and find line 135 for instructions on how to not use them.*
+**Note:** *You may like the way this theme generally looks but not want to use Arc's window buttons. If you'd prefer not to use Arc's window buttons, open `arc.css` in a text editor and find line 148 for instructions on how to not use them.*
 
 **Also note:** *Arc's scrollbars only get applied to internal pages and, as far as I know, there's nothing I can do about that from within a custom css file for Vivaldi. But I also wrote a userstyle that you can use to apply the scrollbars on websites. Install it [here.](https://userstyles.org/styles/142645/arc-scrollbars)*
 
@@ -69,11 +63,7 @@ If you want to **use the Arc window buttons** instead of Vivaldi's default windo
 
 ## Screenshots:
 
-Left side is with AFV css installed, right side is without AFV css installed:
-
-[Arc](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc.png) | [Arc Dark](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-dark.png) | [Arc Darker](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-darker.png)
-
-[Arc Grey](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-grey.png) | [Arc Grey Dark](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-grey-dark.png) | [Arc Grey Darker](https://raw.githubusercontent.com/Tiamarth/Arc-for-Vivaldi/master/scrots/arc-grey-darker.png)
+Imgur Album: https://imgur.com/a/jMSWq
 
 ----
 

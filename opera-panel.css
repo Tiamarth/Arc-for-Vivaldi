@@ -1,50 +1,37 @@
 /* move addressbar and bookmarks  to the right */
 .toolbar-addressbar.toolbar,.bookmark-bar {margin-left: 34px;} /* if you use panel toggle, make this 44 */
-
 /* create illusion of panel merging into address bar by making panel same color as browser background */
 #switch,#panels-container:after {background: var(--colorBg);}
-
 #panels-container:after {border-right: 1px solid var(--colorBg) !important;}
-
 /* move panel buttons down just a tad */
 .bookmarks {margin-top: 1px;} /* if you use the bookmarks bar, make this -1 */
-
 /* disable everything after this line if you don't use AFV */
 #browser.acc-dark.color-behind-tabs-on #main > .toolbar {background: var(--colorBg);}
-
 #browser.acc-dark.color-behind-tabs-on #main,
 #browser.acc-dark.color-behind-tabs-on #switch,
 #browser.acc-dark.color-behind-tabs-on #panel_switch,
 #browser.acc-dark.color-behind-tabs-on #panels-container:after {
-	background: #353945 !important;
+    background: #353945 !important;
 }
-
 #panels-container:after {border-right: 1px solid rgba(0,0,0,0.35) !important;}
-
 .acc-dark.color-behind-tabs-on #switch button svg {fill: #d3dae3;}
-
 .theme-light.acc-light #panel_switch:hover,
 .theme-light.acc-light #switch button:hover {
-	background: var(--colorBgLightIntense) !important;
+    background: var(--colorBgLightIntense) !important;
 }
-
 .theme-light.acc-light #switch,
 .theme-light.acc-light #panel_switch {
-	box-shadow: inset -1px 0 transparent !important;
+    box-shadow: inset -1px 0 transparent !important;
 }
-
 .theme-dark #switch button svg,
 .theme-dark #switch button.active svg,
 .theme-light.acc-dark.color-behind-tabs-on #switch button svg {
-	fill: #d3dae3 !important;
+    fill: #d3dae3 !important;
 }
-
 #switch button svg,
 #switch button.active svg,
 .theme-light.acc-dark #switch button.active svg {
     fill: var(--colorFg) !important;
 }
-
 .theme-dark #switch .webviewbtn img {background: transparent !important;}
-
 .theme-light.acc-light.color-behind-tabs-off #switch button:hover {background: #fff !important;}

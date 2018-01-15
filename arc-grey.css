@@ -1,33 +1,26 @@
 /* this css adds support for arc grey to AFV */
+/* make splash use arc-grey bg color */
+body {background-color: #383838 !important;}
 /* tab stack indicators */
 .stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator,
 .color-behind-tabs-on.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator {
     background-color: #999999 !important;
 }
-
 .stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator:hover {background-color: #BBBBBB !important;}
-
 .stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator.active,
 .stacks-on .tab-strip .tab.active .tab-group-indicator .tab-indicator.active,
 .stacks-on .tab-strip .tab:hover:not(.active) .tab-group-indicator .tab-indicator.active,
 .color-behind-tabs-on.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator.active {
     background-color: #BBBBBB !important;
 }
-
 /* scrollbar */
 #browser ::-webkit-scrollbar-thumb {background: rgba(13,13,13,0.35) !important;}
-
 #browser ::-webkit-scrollbar-thumb:hover {background: #F5F5F5 !important;}
-
 #browser ::-webkit-scrollbar-thumb:active {background: #989898 !important;}
-
 /* panel */
 #panel_switch,#switch {box-shadow: inset -1px 0 #3D3D3D !important;}
-
 #panel_switch,#switch,#panels-container:after {background: #3D3D3D;}
-
 #panel_switch:hover,#switch button:hover {background: #515151 !important;}
-
 /* speed dial navigation */
 .acc-dark button.button-startpage.active,
 .acc-dark .startpage .startpage-navigation,
@@ -35,20 +28,15 @@
 .theme-dark .startpage .startpage-navigation {
     background: #3D3D3D;
 }
-
 .acc-dark .startpage .startpage-navigation,
 .theme-dark .startpage .startpage-navigation {
     box-shadow: inset 0 -2px 0 #343434;
 }
-
 /* status info overlay */
 #status_info > span {background: #999999;}
-
 /* sidebar in settings dialog */
 .button-category:hover {background: #515151 !important;}
-
 .settings-search {background: #2C2C2C;}
-
 .vivaldi-settings .settings-sidebar {
     color: #DBDBDB;
     background: #3D3D3D !important;

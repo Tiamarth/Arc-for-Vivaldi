@@ -9,31 +9,28 @@
  * - Tiamarth#6729
  * - http://tiamarth.com/
  * 
- * CURRENT VERSION: 3.6
+ * CURRENT VERSION: 4.0
  * 
  * LICENSE: GNU General Public License v3.0 | https://github.com/Tiamarth/Arc-for-Vivaldi/blob/master/LICENSE
  * 
  */
 
-/* remove vivaldi's header gradient, arc is a flat theme */
-
-body {--colorAccentBgDark:var(--colorAccentBg) !important;}
-
-/* add a dynamic 1px window border that persists when native window is disabled */
+/* remove vivaldi's header gradient and make splash use arc bg color */
+body {
+    background-color: #2f343f !important;
+    --colorAccentBgDark: transparent !important;
+}
+/* add a 1px window border that persists when native window is disabled */
 #browser {
     padding-top: 0;
     padding-right: 1px;
     padding-bottom: 1px;
     padding-left: 1px;
 }
-
 #browser.maximized,#browser.fullscreen {padding: 0;}
-
 #browser.address-off.tabs-off.bookmark-bar-off {padding-top: 1px;}
-
 /* hide title bar when GUI is hidden */
 #browser.address-off.tabs-off.bookmark-bar-off #header {display: none;}
-
 /* small animation when buttons get hovered */
 .button-toolbar,
 .button-toolbar:hover,
@@ -47,9 +44,8 @@ body {--colorAccentBgDark:var(--colorAccentBg) !important;}
 #switch button:hover,
 #footer button,
 #footer button:hover {
-    transition: 0.3s !important;
+    transition: 0.1s !important;
 }
-
 .button-toolbar,
 .button-category,
 .bookmark-bar button,
@@ -58,203 +54,58 @@ body {--colorAccentBgDark:var(--colorAccentBg) !important;}
 #footer button {
     transition-delay: 0.1s !important;
 }
-
 .bookmark-bar button:hover {border: initial !important;}
-
 #browser.theme-light .button-toolbar:hover,
-#browser.theme-light .bookmark-bar button:hover,
+#browser.theme-light .bookmark-bar button:hover {
+    background: var(--colorAccentBgFadedMore); !important;
+}
 #browser.theme-light.acc-dark.color-behind-tabs-on .button-toolbar:hover,
 #browser.theme-light.acc-dark.color-behind-tabs-on .bookmark-bar button:hover,
 #browser.theme-light.acc-dark.color-behind-tabs-on #footer button:hover {
-    background: var(--colorBgLightIntense); !important;
+    background: var(--colorBgInverser);
 }
-
 #browser.theme-dark .button-toolbar:hover,
 #browser.theme-dark .bookmark-bar button:hover {
-    background: var(--colorAccentBgDarker) !important;
+    background: var(--colorAccentBgFaded) !important;
 }
-
 /* reset animations of buttons that aren't on toolbars */
 #panels .panel-group .panel .button-toolbar:hover,
 #webpage-stack .active.internal.visible.webpageview .internal-page .settings-content .button-toolbar:hover {
     background: var(--colorBg) !important;
     transition: initial !important;
     transition-delay: initial !important;
-
 }
-
-/* make small black border under address bar more subtle */
-.toolbar-addressbar.toolbar:after {background-color: rgba(23, 27, 35, 0.2) !important;}
-
-.theme-dark .toolbar-addressbar.toolbar:after {background-color: rgba(23, 27, 35, 0.5) !important;}
-
-/* more contrast on tabs by adding shadows (as seen in official arc firefox theme) */
+/* reduce white space above tabs */
+#tabs-container.top {padding-top: 4px;}
+.normal #tabs-container.top {padding-top: 5px !important;}
+/* reduce white space below tabs when tabs are bottom */
+.normal #tabs-container.bottom {padding-bottom: 5px !important;}
+.stacks-on #tabs-container.bottom {padding-bottom: 3px;}
+/* less obnoxious top border on bottom tabs */
+.address-top #tabs-container.bottom {
+    border-top-width: 1px;
+    border-color: rgba(23,27,35,0.1);
+}
 /* shadow above navigation bar */
 #tabs-container {box-shadow: inset 0 -10px 1.7px -10px rgba(0,0,0,0.2);}
-
 .theme-dark #tabs-container {box-shadow: inset 0 -10px 3px -9px rgba(0,0,0,0.4);}
-
+#browser:not(.tabs-top) #tabs-container {box-shadow: none;}
+#browser:not(.tabs-top).theme-dark #tabs-container {box-shadow: none;}
 /* build shadow around active tab */
 .tab-position .tab.active {
     box-shadow: 0 -2px 2px rgba(0,0,0,0), /* top */
     -1px -1px 0.2px rgba(0,0,0,0.1), /* left */
     1px -1px 0.2px rgba(0,0,0,0.1); /* right */
 }
-
 .theme-dark .tab-position .tab.active {
-    box-shadow: 0px -2px 3px rgba(0,0,0,0.2), /* top */
-    -2.5px -1px 0.2px rgba(0,0,0,0.2), /* left */
-    2.5px -1px 0.2px rgba(0,0,0,0.2); /* right */
+    box-shadow: 0px -2px 3px rgba(0,0,0,0.2),
+    -2.5px -1px 0.2px rgba(0,0,0,0.2),
+    2.5px -1px 0.2px rgba(0,0,0,0.2);
 }
-
-/* more uniform new tab button */
-.newtab {
-    margin-left: -1px;
-    transition: background 0.3s;
-}
-
-.newtab:hover,.acc-dark.color-behind-tabs-on .newtab:hover {
-    background: var(--colorBgLightIntense);
-    border-radius: 0;
-}
-
-.acc-dark.color-behind-tabs-on .newtab:hover {background: var(--colorAccentBgFadedMost);}
-
-.newtab svg {border-radius: 0 !important;}
-
-/* remove background on window buttons */
-.window-buttongroup button {
-    width: 30px;
-    background-color: rgba(0,0,0,0) !important;
-}
-
-.window-buttongroup button:hover {background-color: rgba(0,0,0,0) !important;}
-
-.window-buttongroup button:active {background-color: rgba(0,0,0,0) !important;}
-
-.isblurred #browser .window-buttongroup img {opacity: 0.3;}
-
-/* position window buttons according to arc window buttons */
-.window-minimize {margin-right: 5px !important;}
-
-.window-maximize {margin-right: 5px !important;}
-
-.window-close {margin-right: -7px !important;}
-
-/* hide default window buttons svgs */
-/* remove from this line down to line 245 if you don't want to use arc's window buttons */
-.window-buttongroup svg {display: none;}
-
-/* apply arc window buttons */
-.window-minimize { /* minimize */
-    background: url('arc/titlebutton-minimize.png') no-repeat;
-}
-
-.window-maximize { /* maximize */
-    background: url('arc/titlebutton-maximize.png') no-repeat;
-}
-
-.window-close { /* close */
-    background: url('arc/titlebutton-close.png') no-repeat;
-}
-
-/* on hover */
-.window-minimize:hover { /* minimize */
-    background: url('arc/titlebutton-minimize-hover.png') no-repeat !important;
-}
-
-.window-maximize:hover { /* maximize */
-    background: url('arc/titlebutton-maximize-hover.png') no-repeat !important;
-}
-
-.window-close:hover { /* close */
-    background: url('arc/titlebutton-close-hover.png') no-repeat !important;
-}
-
-/* on hover:active */
-.window-minimize:hover:active { /* minimize */
-    background: url('arc/titlebutton-minimize-active.png') no-repeat !important;
-}
-
-.window-maximize:hover:active { /* maximize */
-    background: url('arc/titlebutton-maximize-active.png') no-repeat !important;
-}
-
-.window-close:hover:active { /* close */
-    background: url('arc/titlebutton-close-active.png') no-repeat !important;
-}
-
-/* on dark theme */
-.acc-dark .window-minimize,.theme-dark .window-minimize { /* minimize */
-    background: url('arc/titlebutton-minimize-dark.png') no-repeat;
-}
-
-.acc-dark .window-maximize,.theme-dark .window-maximize { /* maximize */
-    background: url('arc/titlebutton-maximize-dark.png') no-repeat;
-}
-
-.acc-dark .window-close,.theme-dark .window-close { /* close */
-    background: url('arc/titlebutton-close-dark.png') no-repeat;
-}
-
-/* on dark theme:hover */
-.acc-dark .window-minimize:hover,.theme-dark .window-minimize:hover { /* minimize */
-    background: url('arc/titlebutton-minimize-hover-dark.png') no-repeat !important;
-}
-
-.acc-dark .window-maximize:hover,.theme-dark .window-maximize:hover { /* maximize */
-    background: url('arc/titlebutton-maximize-hover-dark.png') no-repeat !important;
-}
-
-.acc-dark .window-close:hover,.theme-dark .window-close:hover { /* close */
-    background: url('arc/titlebutton-close-hover-dark.png') no-repeat !important;
-}
-
-/* on dark theme:hover:active */
-.acc-dark .window-minimize:hover:active,.theme-dark .window-minimize:hover:active { /* minimize */
-    background: url('arc/titlebutton-minimize-active-dark.png') no-repeat !important;
-}
-
-.acc-dark .window-maximize:hover:active,.theme-dark .window-maximize:hover:active { /* maximize */
-    background: url('arc/titlebutton-maximize-active-dark.png') no-repeat !important;
-}
-
-.acc-dark .window-close:hover:active,.theme-dark .window-close:hover:active { /* close */
-    background: url('arc/titlebutton-close-active-dark.png') no-repeat !important;
-}
-
-/* on inactive window:base */
-.isblurred .window-minimize { /* minimize */
-    background: url('arc/titlebutton-minimize-backdrop.png') no-repeat;
-}
-
-.isblurred .window-maximize { /* maximize */
-    background: url('arc/titlebutton-maximize-backdrop.png') no-repeat;
-}
-
-.isblurred .window-close { /* close */
-    background: url('arc/titlebutton-close-backdrop.png') no-repeat;
-}
-
-/* on inactive window:dark */
-.acc-dark.isblurred .window-minimize,.theme-dark.isblurred .window-minimize { /* minimize */
-    background: url('arc/titlebutton-minimize-backdrop-dark.png') no-repeat;
-}
-
-.acc-dark.isblurred .window-maximize,.theme-dark.isblurred .window-maximize { /* maximize */
-    background: url('arc/titlebutton-maximize-backdrop-dark.png') no-repeat;
-}
-
-.acc-dark.isblurred .window-close,.theme-dark.isblurred .window-close { /* close */
-    background: url('arc/titlebutton-close-backdrop-dark.png') no-repeat;
-}
-
-/* move tab bin 19px to the left */
-.toggle-trash {margin-right: 19px;}
-
+#browser:not(.tabs-top) .tab-position .tab.active {box-shadow: none;}
+#browser:not(.tabs-top).theme-dark .tab-position .tab.active {box-shadow: none;}
 /* blue tab stack indicators */
 .tab-group-indicator {background: var(--colorBg);}
-
 .color-behind-tabs-on .tab-group-indicator {background: var(--colorAccentBg);}
 
 .stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator,
@@ -263,78 +114,127 @@ body {--colorAccentBgDark:var(--colorAccentBg) !important;}
     margin-bottom: -2px;
     background-color: #5294e2 !important;
 }
-
 .stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator:hover {background-color: #bcd6f5 !important;}
-
 .stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator.active,
 .stacks-on .tab-strip .tab.active .tab-group-indicator .tab-indicator.active,
 .stacks-on .tab-strip .tab:hover:not(.active) .tab-group-indicator .tab-indicator.active,
 .color-behind-tabs-on.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator.active {
     background-color: #88B7F0 !important;
 }
-
 .tabs-top.tabs-at-edge.maximized.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator.active {padding-bottom: 0;}
-
-/* arc style scrollbars, for these scrollbars universally: https://userstyles.org/styles/142645/arc-scrollbars */
-#browser ::-webkit-scrollbar {
-    width: 9px !important;
-    height: 9px !important;
+/* no border radius on new tab button */
+.newtab:hover,.acc-dark.color-behind-tabs-on .newtab:hover {border-radius: 0;}
+.newtab svg {border-radius: 0 !important;}
+/* reduce white space between tabs and tab bin */
+.resize {
+    margin-right: -25px;
+    padding-right: 25px;
 }
-
-#browser ::-webkit-scrollbar-button {display: none !important;}
-
-#browser ::-webkit-scrollbar-track {background-color: transparent !important;}
-
-#browser ::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.35) !important;
-    border: rgba(211,218,227,0.5) solid 1px !important;
-    -webkit-border-radius: 20px !important;
+.toggle-trash {margin-right: 10px;}
+/* when tabs are not standard, merge address bar with header */
+#browser:not(.tabs-top) #titlebar {z-index: 1;}
+#browser:not(.tabs-top) #titlebar #pagetitle {display: none;}
+#browser:not(.tabs-top) #main {margin-top: -25px;}
+#browser:not(.tabs-top) .toolbar-addressbar {padding: 0 100px 0 35px;}
+#browser:not(.tabs-top) .vivaldi {top: 2px;}
+#browser.address-top.tabs-off .vivaldi {top: 5.5px;}
+/* remove from this line down to line 185 if you don't want to use arc's window buttons */
+/* better positioning on window buttons */
+.window-buttongroup {margin-top: 4.5px;}
+.maximized .window-buttongroup {margin: initial;}
+#browser:not(.tabs-top) .window-buttongroup {margin-top: 4px;}
+.window-minimize {margin-right: 5px !important;}
+.window-maximize {margin-right: 5px !important;}
+.window-close {margin-right: -7px !important;}
+/* remove background on window buttons */
+.window-buttongroup button {
+    width: 30px;
+    background-color: rgba(0,0,0,0) !important;
 }
-
-#browser ::-webkit-scrollbar-thumb:hover {
-    border: none !important;
-    background: rgba(119,119,119,0.5) !important;
-}
-
-#browser ::-webkit-scrollbar-thumb:active {
-    border: none !important;
-    background: #5294e2 !important;
-}
-
+.window-buttongroup button:hover {background-color: rgba(0,0,0,0) !important;}
+.window-buttongroup button:active {background-color: rgba(0,0,0,0) !important;}
+.isblurred #browser .window-buttongroup img {opacity: 0.3;}
+/* hide default window buttons svgs */
+.window-buttongroup svg {display: none;}
+/* apply arc window buttons */
+/* minimize */
+.window-minimize {background: url('arc/titlebutton-minimize.png') no-repeat;}
+/* maximize */
+.window-maximize {background: url('arc/titlebutton-maximize.png') no-repeat;}
+/* close */
+.window-close {background: url('arc/titlebutton-close.png') no-repeat;}
+/* on hover */
+.window-minimize:hover {background: url('arc/titlebutton-minimize-hover.png') no-repeat !important;}
+.window-maximize:hover {background: url('arc/titlebutton-maximize-hover.png') no-repeat !important;}
+.window-close:hover {background: url('arc/titlebutton-close-hover.png') no-repeat !important;}
+/* on hover:active */
+.window-minimize:hover:active {background: url('arc/titlebutton-minimize-active.png') no-repeat !important;}
+.window-maximize:hover:active {background: url('arc/titlebutton-maximize-active.png') no-repeat !important;}
+.window-close:hover:active {background: url('arc/titlebutton-close-active.png') no-repeat !important;}
+/* on dark theme */
+.acc-dark.color-behind-tabs-on .window-minimize,.theme-dark .window-minimize {background: url('arc/titlebutton-minimize-dark.png') no-repeat;}
+.acc-dark.color-behind-tabs-on .window-maximize,.theme-dark .window-maximize {background: url('arc/titlebutton-maximize-dark.png') no-repeat;}
+.acc-dark.color-behind-tabs-on .window-close,.theme-dark .window-close {background: url('arc/titlebutton-close-dark.png') no-repeat;}
+/* on dark theme:hover */
+.acc-dark.color-behind-tabs-on .window-minimize:hover,.theme-dark .window-minimize:hover {background: url('arc/titlebutton-minimize-hover-dark.png') no-repeat !important;}
+.acc-dark.color-behind-tabs-on .window-maximize:hover,.theme-dark .window-maximize:hover {background: url('arc/titlebutton-maximize-hover-dark.png') no-repeat !important;}
+.acc-dark.color-behind-tabs-on .window-close:hover,.theme-dark .window-close:hover {background: url('arc/titlebutton-close-hover-dark.png') no-repeat !important;}
+/* on dark theme:hover:active */
+.acc-dark.color-behind-tabs-on .window-minimize:hover:active,.theme-dark .window-minimize:hover:active {background: url('arc/titlebutton-minimize-active-dark.png') no-repeat !important;}
+.acc-dark.color-behind-tabs-on .window-maximize:hover:active,.theme-dark .window-maximize:hover:active {background: url('arc/titlebutton-maximize-active-dark.png') no-repeat !important;}
+.acc-dark.color-behind-tabs-on .window-close:hover:active,.theme-dark .window-close:hover:active {background: url('arc/titlebutton-close-active-dark.png') no-repeat !important;}
+/* on light theme dark accent behind tabs */
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-minimize {background: url('arc/titlebutton-minimize.png') no-repeat !important;}
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-maximize {background: url('arc/titlebutton-maximize.png') no-repeat !important;}
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-close {background: url('arc/titlebutton-close.png') no-repeat !important;}
+/* on light theme dark accent behind tabs:hover */
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-minimize:hover {background: url('arc/titlebutton-minimize-hover.png') no-repeat !important;}
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-maximize:hover {background: url('arc/titlebutton-maximize-hover.png') no-repeat !important;}
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-close:hover {background: url('arc/titlebutton-close-hover.png') no-repeat !important;}
+/* on light theme dark accent behind tabs:hover:active */
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-minimize:hover:active {background: url('arc/titlebutton-minimize-active.png') no-repeat !important;}
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-maximize:hover:active {background: url('arc/titlebutton-maximize-active.png') no-repeat !important;}
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-close:hover:active {background: url('arc/titlebutton-close-active.png') no-repeat !important;}
+/* on inactive window:base */
+.isblurred .window-minimize {background: url('arc/titlebutton-minimize-backdrop.png') no-repeat;}
+.isblurred .window-maximize {background: url('arc/titlebutton-maximize-backdrop.png') no-repeat;}
+.isblurred .window-close {background: url('arc/titlebutton-close-backdrop.png') no-repeat;}
+/* on inactive window:dark */
+.acc-dark.isblurred .window-minimize,.theme-dark.isblurred .window-minimize {background: url('arc/titlebutton-minimize-backdrop-dark.png') no-repeat;}
+.acc-dark.isblurred .window-maximize,.theme-dark.isblurred .window-maximize {background: url('arc/titlebutton-maximize-backdrop-dark.png') no-repeat;}
+.acc-dark.isblurred .window-close,.theme-dark.isblurred .window-close {background: url('arc/titlebutton-close-backdrop-dark.png') no-repeat;}
+/* make expanded extensions wrapper blend better */
+.toolbar-addressbar .button-toolbar.browserAction-button {background-color: var(--colorAccentBg);}
+#browser.color-behind-tabs-on .toolbar-addressbar .button-toolbar.browserAction-button {background-color: var(--colorBg);}
+/* make small black border under address bar more subtle */
+.toolbar-addressbar.toolbar:after {background-color: rgba(23,27,35,0.2) !important;}
+.theme-dark .toolbar-addressbar.toolbar:after {background-color: rgba(23, 27, 35, 0.5) !important;}
 /* dark panel on all themes */
 #panel_switch,#switch {box-shadow: inset -1px 0 #353945 !important;}
-
 #panel_switch,#switch,#panels-container:after {background: #353945;}
-
 #panels-container:after {border-right: 1px solid rgba(0,0,0,0.35) !important;}
-
 #panel_switch polygon,#switch button svg {fill: #d3dae3 !important;}
-
 #switch button.active svg {fill: var(--colorFg) !important;}
-
 #switch button.active,
 #switch button.active:hover {
     background-color: var(--colorBgLightIntense) !important;
     border: 1px rgba(0,0,0,0.5);
     border-style: inset none inset none;
 }
-
-.theme-dark #switch .webviewbtn img,
-#switch button {
-    background: transparent !important;
-}
-
+.theme-dark #switch .webviewbtn img,#switch button {background: transparent !important;}
 #panel_switch:hover,#switch button:hover {background: #494D5A !important;}
-
 /* remove black border on panel button hover */
 #switch button:hover:not(:disabled):not(.active) {box-shadow: initial;}
-
+/* active tab in windows panel uses theme highlight color */
+.vivaldi-tree .tree-row[data-selected],
+.vivaldi-tree .tree-row[data-selected][data-nofocus] {
+    color: white;
+    background: var(--colorHighlightBg);
+}
 /* make speed dial navigation smaller */
 .startpage-navigation {min-height: 34px !important;}
-
 /* remove white left border in speed dial navigation */
 .startpage .startpage-navigation .startpage-navigation-group:last-of-type {border-left: none;}
-
 /* dark speed dial navigation unless light theme with light accent */
 .acc-dark button.button-startpage.active,
 .acc-dark .startpage .startpage-navigation,
@@ -343,41 +243,32 @@ body {--colorAccentBgDark:var(--colorAccentBg) !important;}
     background: #353945;
     color: #cdd6db;
 }
-
 .acc-dark .startpage .startpage-navigation,
 .theme-dark .startpage .startpage-navigation {
     box-shadow: inset 0 -2px 0 #2f343f;
 }
-
 /* use arc colors for stats info overlay */
 #footer.footer > #status_info > span {
     border: initial;
     color: var(--colorFg);
     background: initial;
 }
-
 #status_info > span {
     border: 0;
     color: #fff;
     background: #5294e2;
 }
-
 /* use arc sidebar color in vivaldi's settings dialog */
 .button-category:hover {background: #494D5A !important;}
-
 .settings-search {
     background: #292E39;
     border-width: 0 !important;
-    box-shadow: inset 0 0 2px black !important;
 }
-
 .vivaldi-settings .settings-sidebar {
     color: #d3dae3;
     background: #353945 !important;
 }
-
 .vivaldi-settings .settings-sidebar svg {fill: #fff;}
-
 .button-category:focus:not([tabindex='-1']),
 .button-category:focus:not([tabindex='-1']) svg,
 .settings-sidebar .settings-navigation .navigation-category.category-selected .button-category.category-full-selected,
@@ -386,4 +277,24 @@ body {--colorAccentBgDark:var(--colorAccentBg) !important;}
     fill: var(--colorHighlightBg);
     background: var(--colorBgLightIntense) !important;
     transition: initial !important;
+}
+/* arc style scrollbars, for these scrollbars universally: https://userstyles.org/styles/142645/arc-scrollbars */
+#browser ::-webkit-scrollbar {
+    width: 9px !important;
+    height: 9px !important;
+}
+#browser ::-webkit-scrollbar-button {display: none !important;}
+#browser ::-webkit-scrollbar-track {background-color: transparent !important;}
+#browser ::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.35) !important;
+    border: rgba(211,218,227,0.5) solid 1px !important;
+    -webkit-border-radius: 20px !important;
+}
+#browser ::-webkit-scrollbar-thumb:hover {
+    border: none !important;
+    background: rgba(119,119,119,0.5) !important;
+}
+#browser ::-webkit-scrollbar-thumb:active {
+    border: none !important;
+    background: #5294e2 !important;
 }

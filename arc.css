@@ -9,7 +9,7 @@
  * - Tiamarth#6729
  * - http://tiamarth.com/
  * 
- * CURRENT VERSION: 4.0
+ * CURRENT VERSION: 4.3
  * 
  * LICENSE: GNU General Public License v3.0 | https://github.com/Tiamarth/Arc-for-Vivaldi/blob/master/LICENSE
  * 
@@ -30,7 +30,7 @@ body {
 #browser.maximized,#browser.fullscreen {padding: 0;}
 #browser.address-off.tabs-off.bookmark-bar-off {padding-top: 1px;}
 /* hide title bar when GUI is hidden */
-#browser.address-off.tabs-off.bookmark-bar-off #header {display: none;}
+#browser.minimal-ui.address-off.tabs-off.bookmark-bar-off #header {display: none;}
 /* small animation when buttons get hovered */
 .button-toolbar,
 .button-toolbar:hover,
@@ -139,14 +139,31 @@ body {
 #browser:not(.tabs-top) .vivaldi {top: 2px;}
 #browser.address-top.tabs-off .vivaldi {top: 5.5px;}
 /* when tabs are not standard and address bar is bottom, redisplay titlebar and reset address bar margins */
-#browser:not(.tabs-top).address-bottom #titlebar #pagetitle {display: block;}
-#browser:not(.tabs-top).address-bottom #main {margin-top: 7px;}
+#browser.address-off.tabs-off #header {display: flex;}
+#browser:not(.tabs-top).address-off #titlebar #pagetitle,
+#browser:not(.tabs-top).address-bottom #titlebar #pagetitle {
+    display: flex;
+}
+#browser:not(.tabs-off).address-off.bookmark-bar-top .toolbar-addressbar,
+#browser.address-off.tabs-off.bookmark-bar-top .toolbar-addressbar {
+    display: none;
+}
+#browser:not(.tabs-top).address-off #main,
+#browser:not(.tabs-top).address-bottom #main {
+    margin-top: 0;
+}
+#browser:not(.tabs-top).address-off .vivaldi,
+#browser:not(.tabs-top).address-bottom .vivaldi {
+    top: -2px;
+}
 #browser:not(.tabs-top).address-bottom .toolbar-addressbar {padding: 0;}
 /* remove from this line down to line 185 if you don't want to use arc's window buttons */
 /* better positioning on window buttons */
 .window-buttongroup {margin-top: 4.5px;}
 .maximized .window-buttongroup {margin: initial;}
 #browser:not(.tabs-top) .window-buttongroup {margin-top: 4px;}
+#browser:not(.tabs-top).address-off .window-buttongroup,
+#browser:not(.tabs-top).address-bottom .window-buttongroup {margin-top: -1px;}
 .window-minimize {margin-right: 5px !important;}
 .window-maximize {margin-right: 5px !important;}
 .window-close {margin-right: -7px !important;}

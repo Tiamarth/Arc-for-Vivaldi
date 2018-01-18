@@ -138,6 +138,10 @@ body {
 #browser:not(.tabs-top) .toolbar-addressbar {padding: 0 100px 0 35px;}
 #browser:not(.tabs-top) .vivaldi {top: 2px;}
 #browser.address-top.tabs-off .vivaldi {top: 5.5px;}
+/* when tabs are not standard and address bar is bottom, redisplay titlebar and reset address bar margins */
+#browser:not(.tabs-top).address-bottom #titlebar #pagetitle {display: block;}
+#browser:not(.tabs-top).address-bottom #main {margin-top: 7px;}
+#browser:not(.tabs-top).address-bottom .toolbar-addressbar {padding: 0;}
 /* remove from this line down to line 185 if you don't want to use arc's window buttons */
 /* better positioning on window buttons */
 .window-buttongroup {margin-top: 4.5px;}
@@ -233,6 +237,7 @@ body {
 }
 /* make speed dial navigation smaller */
 .startpage-navigation {min-height: 34px !important;}
+.button-startpage {box-shadow: none !important;}
 /* remove white left border in speed dial navigation */
 .startpage .startpage-navigation .startpage-navigation-group:last-of-type {border-left: none;}
 /* dark speed dial navigation unless light theme with light accent */
@@ -240,8 +245,8 @@ body {
 .acc-dark .startpage .startpage-navigation,
 .theme-dark button.button-startpage.active,
 .theme-dark .startpage .startpage-navigation {
-    background: #353945;
     color: #cdd6db;
+    background: #353945;
 }
 .acc-dark .startpage .startpage-navigation,
 .theme-dark .startpage .startpage-navigation {

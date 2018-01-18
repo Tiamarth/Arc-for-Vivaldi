@@ -9,7 +9,7 @@
  * - Tiamarth#6729
  * - http://tiamarth.com/
  * 
- * CURRENT VERSION: 4.3
+ * CURRENT VERSION: 4.3.1
  * 
  * LICENSE: GNU General Public License v3.0 | https://github.com/Tiamarth/Arc-for-Vivaldi/blob/master/LICENSE
  * 
@@ -127,10 +127,15 @@ body {
 .newtab svg {border-radius: 0 !important;}
 /* reduce white space between tabs and tab bin */
 .resize {
-    margin-right: -25px;
+    margin-right: -20px;
     padding-right: 25px;
 }
+#browser:not(.tabs-top) .resize {
+    margin: 0;
+    padding-right: 0;
+}
 .toggle-trash {margin-right: 10px;}
+#browser:not(.tabs-top) .toggle-trash {margin: -10px auto auto auto;}
 /* when tabs are not standard, merge address bar with header */
 #browser:not(.tabs-top) #titlebar {z-index: 1;}
 #browser:not(.tabs-top) #titlebar #pagetitle {display: none;}

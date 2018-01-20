@@ -143,7 +143,6 @@ body {
     padding-left: 10px;
 }
 .synced-tabs-button {margin: auto 5px auto -10px;}
-.synced-tabs-button {display: none;}
 #browser:not(.tabs-top) .toggle-trash {margin: -10px auto auto auto;}
 /* when tabs are not standard, merge address bar with header */
 #browser:not(.tabs-top) #titlebar {z-index: 1;}

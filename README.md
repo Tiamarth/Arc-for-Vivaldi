@@ -2,6 +2,8 @@
 
 Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc](https://github.com/NicoHood/arc-theme) (or [Arc Grey](https://github.com/eti0/arc-grey-theme)), a popular GTK theme.
 
+01/20/18 I'm now considering this project "complete." I'll probably only update it in the future if a Vivaldi update breaks something, or if someone finds a bug in AFV that I didn't know about.
+
 ## Features:
 
 - Use Arc's window buttons even when Native Window is disabled in the settings

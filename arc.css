@@ -170,16 +170,16 @@ body {
     top: -2px;
 }
 #browser:not(.tabs-top).address-bottom .toolbar-addressbar {padding: 0;}
-/* remove from this line down to line 185 if you don't want to use arc's window buttons */
+/* remove from this line down to line 239 if you don't want to use arc's window buttons */
 /* better positioning on window buttons */
-.window-buttongroup {margin-top: 4.5px;}
-.maximized .window-buttongroup {margin: initial;}
-#browser:not(.tabs-top) .window-buttongroup {margin-top: 4px;}
-#browser:not(.tabs-top).address-off .window-buttongroup,
-#browser:not(.tabs-top).address-bottom .window-buttongroup {margin-top: -1px;}
-.window-minimize {margin-right: 5px !important;}
-.window-maximize {margin-right: 5px !important;}
-.window-close {margin-right: -7px !important;}
+.linux .window-buttongroup {margin-top: 4.5px;}
+.linux .maximized .window-buttongroup {margin: initial;}
+.linux #browser:not(.tabs-top) .window-buttongroup {margin-top: 4px;}
+.linux #browser:not(.tabs-top).address-off .window-buttongroup,
+.linux #browser:not(.tabs-top).address-bottom .window-buttongroup {margin-top: -1px;}
+.linux .window-minimize {margin-right: 5px !important;}
+.linux .window-maximize {margin-right: 5px !important;}
+.linux .window-close {margin-right: -7px !important;}
 /* remove background on window buttons */
 .window-buttongroup button {
     width: 30px;

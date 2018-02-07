@@ -38,7 +38,7 @@ If you want to **use the opera panel addon,** save `opera-panel.css` in the same
 
 If you want to **use the Arc window buttons** instead of Vivaldi's default window buttons, save the `arc` folder in style as well.
 
-**Note:** *You may like the way this theme generally looks but not want to use Arc's window buttons. If you'd prefer not to use Arc's window buttons, open `arc.css` in a text editor and find line 148 for instructions on how to not use them.*
+**Note:** *You may like the way this theme generally looks but not want to use Arc's window buttons. If you'd prefer not to use Arc's window buttons, open `arc.css` in a text editor and find line 173 for instructions on how to not use them.*
 
 **Also note:** *Arc's scrollbars only get applied to internal pages and, as far as I know, there's nothing I can do about that from within a custom css file for Vivaldi. But I also wrote a userstyle that you can use to apply the scrollbars on websites. Install it [here.](https://userstyles.org/styles/142645/arc-scrollbars)*
 

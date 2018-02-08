@@ -64,6 +64,11 @@ If you want to **use the Arc window buttons** instead of Vivaldi's default windo
 | [x] Transparent Tabs             | [x] Transparent Tabs             | [x] Transparent Tabs             |
 | Corner Rounding: 2px             | Corner Rounding: 2px             | Corner Rounding: 2px             |
 
+**Need more help?** Get in touch!
+- [Join my Discord server](https://discord.gg/ZfDP2ZV)
+- [Create an issue here on GitHub](https://github.com/Tiamarth/Arc-for-Vivaldi/issues/new)
+- [Email me](mailto:tiabusy@gmail.com)
+
 ## Screenshots:
 
 Imgur Album: https://imgur.com/a/jMSWq

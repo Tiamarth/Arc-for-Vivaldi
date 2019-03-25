@@ -2,21 +2,15 @@
 
 Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc](https://github.com/NicoHood/arc-theme) (or [Arc Grey](https://github.com/eti0/arc-grey-theme)), a popular GTK theme.
 
-03/24/19 - I'm beginning a rewrite of this skin to clean up the code and refamiliarize myself with the project. I plan on removing the features that make Vivaldi more "compact" and "minimal" (including the windowed border) and moving those to their own project. This repository will become *just* an Arc skin for Vivaldi.
-
 ## Features:
 
 - Use Arc's window buttons even when Native Window is disabled in the settings
 - Make tab stack indicators Arc-blue, like running application indicators
 - Use Arc's scrollbars
 - Use Arc's sidebar color even on light themes, unless using the opera panel addon
-
 - Use Arc's toolbar color for start page navigation
-- When the current theme is set to apply accent color to window, remove Vivaldi's header gradient.
+- Remove Vivaldi's ugly header gradient
 - 1px border around Vivaldi that persists even when Native Window is disabled in the settings
-- Hide Vivaldi's built-in titlebar when GUI is hidden
-- When tabs are not at the top of the window, merge address bar with header
-- Optionally make the panel appear to merge with the Vivaldi menu icon, similar to Opera's panel
 - Optionally integrate with [Arc Grey](https://github.com/eti0/arc-grey-theme) instead of vanilla Arc
 
 ## Installation
@@ -24,7 +18,7 @@ Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc](htt
 First, find `style` in your Vivaldi install directory. It should be in the following places depending on your platform:
 
 **Linux:** `/opt/vivaldi/resources/vivaldi/style`  
-**Windows:** `%localappdata%\Vivaldi\Application\[version]\resources\vivaldi\style`
+**Windows:** `%localappdata%\Vivaldi\Application\[version]\resources\vivaldi\style`  
 **Mac:** `/Applications/Vivaldi.app/Contents/Versions/[version]/Vivaldi Framework.framework/Resources/vivaldi/style`
 
 Now,
@@ -48,7 +42,7 @@ If you want to **use the Arc window buttons** instead of Vivaldi's default windo
 | Arc theme settings:              | Arc Dark theme settings:         | Arc Darker theme settings:       |
 | -------------------------------- | -------------------------------- | -------------------------------- |
 | Background: #e7e8eb              | Background: #2f343f              | Background: #f5f6f7              |
-| Foreground: #7a8b94              | Foreground: #d3dae3              | Foreground: #7a8b94              |
+| Foreground: #303030              | Foreground: #d3dae3              | Foreground: #7a8b94              |
 | Highlight: #5294e2               | Highlight: #5294e2               | Highlight: #5294e2               |
 | Accent: #f9f9fa                  | Accent: #383c4a                  | Accent: #2f343f                  |
 | [ ] Apply Accent Color to Window | [ ] Apply Accent Color to Window | [x] Apply Accent Color to Window |

@@ -29,8 +29,6 @@ Then open `resources/vivaldi/browser.html` in a text and add the following to `<
 
 If you want to **integrate with arc-grey instead of Arc,** save `arc-grey.css` in the same folder as `arc.css` and then open `browser.html` again and add `<link rel="stylesheet" href="style/arc-grey.css" />` under the code from the last step.
 
-If you want to **use the opera panel addon,** save `opera-panel.css` in the same folder as `arc.css` and then open `browser.html` again and add `<link rel="stylesheet" href="style/opera-panel.css" />` under the code from the first step.
-
 If you want to **use the Arc window buttons** instead of Vivaldi's default window buttons, save the `arc` folder in style as well.
 
 **Note:** *You may like the way this theme generally looks but not want to use Arc's window buttons. If you'd prefer not to use Arc's window buttons, open `arc.css` in a text editor and find line 173 for instructions on how to not use them.*

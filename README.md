@@ -2,9 +2,7 @@
 
 Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc](https://github.com/NicoHood/arc-theme) (or [Arc Grey](https://github.com/eti0/arc-grey-theme)), a popular GTK theme.
 
-07/30/18 There are a few bugs in this skin right now, but I'm in between computers for a little while at the moment and can't dedicate sufficient time to any of my projects. I'm building a new computer and will be back to updating this and my other stuff once I've done so. Sorry for any inconvenience.
-
-01/20/18 I'm now considering this project "complete." I'll probably only update it in the future if a Vivaldi update breaks something, or if someone finds a bug in AFV that I didn't know about.
+03/24/19 - I'm beginning a rewrite of this skin to clean up the code and refamiliarize myself with the project. I plan on removing the features that make Vivaldi more "compact" and "minimal" (including the windowed border) and moving those to their own project. This repository will become *just* an Arc skin for Vivaldi.
 
 ## Features:
 
@@ -12,6 +10,7 @@ Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc](htt
 - Make tab stack indicators Arc-blue, like running application indicators
 - Use Arc's scrollbars
 - Use Arc's sidebar color even on light themes, unless using the opera panel addon
+
 - Use Arc's toolbar color for start page navigation
 - When the current theme is set to apply accent color to window, remove Vivaldi's header gradient.
 - 1px border around Vivaldi that persists even when Native Window is disabled in the settings
@@ -25,7 +24,7 @@ Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc](htt
 First, find `style` in your Vivaldi install directory. It should be in the following places depending on your platform:
 
 **Linux:** `/opt/vivaldi/resources/vivaldi/style`  
-**Windows:** `C:\Users\[username]\AppData\Local\Vivaldi\Application\[version]\resources\vivaldi\style`  
+**Windows:** `%localappdata%\Vivaldi\Application\[version]\resources\vivaldi\style`
 **Mac:** `/Applications/Vivaldi.app/Contents/Versions/[version]/Vivaldi Framework.framework/Resources/vivaldi/style`
 
 Now,

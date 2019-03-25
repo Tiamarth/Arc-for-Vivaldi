@@ -6,67 +6,75 @@
  * 
  * - tiabusy@gmail.com
  * - https://github.com/Tiamarth
- * - Discord: Tiamarth#6729
  * - http://tiamarth.com/
  * 
- * CURRENT VERSION: 4.3.3
+ * CURRENT VERSION: 5.0
  * 
  * LICENSE: GNU General Public License v3.0 | https://github.com/Tiamarth/Arc-for-Vivaldi/blob/master/LICENSE
  * 
  */
 
+/* pallete */
+/* everything except shadows is defined here, including black, white, and transparent, just in case i want to change these values to something more subtle in the future */
+:root {
+    --white: white;
+    --black: black;
+    --transparent: transparent;
+    --arcDarkBg: #2f343f;
+    --arcSuperDarkBg: #1e232d;
+    --arcHighlight: #5294e2;
+    --arcHighlighter: #88B7F0;
+    --arcHighlightest: #bcd6f5;
+    --arcDarkText: #d3dae3;
+    --arcPanel: #2A303A;
+    --arcBaseButtonHover: #dcdcdc;
+    --arcDarkerButtonHover: #c3c3c3;
+    --arcDarkButtonHover: #505465;
+}
 /* remove vivaldi's header gradient and make splash use arc bg color */
 body {
-    background-color: #2f343f !important;
-    --colorAccentBgDark: transparent !important;
+    background-color: var(--arcBase) !important;
+    --colorAccentBgDark: var(--transparent) !important;
 }
-/* add a 1px window border that persists when native window is disabled */
-#browser {
-    padding-top: 0;
-    padding-right: 1px;
-    padding-bottom: 1px;
-    padding-left: 1px;
-}
-#browser.maximized,#browser.fullscreen {padding: 0;}
-#browser.address-off.tabs-off.bookmark-bar-off {padding-top: 1px;}
-/* hide title bar when GUI is hidden */
-#browser.minimal-ui.address-off.tabs-off.bookmark-bar-off #header {display: none;}
-/* small animation when buttons get hovered */
-.button-toolbar,
-.button-toolbar:hover,
-.button-category,
-.button-category:hover,
-.bookmark-bar button,
-.bookmark-bar button:hover,
-#panel_switch,
-#panel_switch:hover,
-#switch button,
-#switch button:hover,
-#footer button,
-#footer button:hover {
+/* small animation when buttons get hovered when user has animations enabled */
+#browser.animation-on .button-toolbar,
+#browser.animation-on .button-toolbar:hover,
+#browser.animation-on .button-category,
+#browser.animation-on .button-category:hover,
+#browser.animation-on .bookmark-bar button,
+#browser.animation-on .bookmark-bar button:hover,
+#browser.animation-on #panel_switch,
+#browser.animation-on #panel_switch:hover,
+#browser.animation-on #switch button,
+#browser.animation-on #switch button:hover,
+#browser.animation-on #footer button,
+#browser.animation-on #footer button:hover {
     transition: 0.1s !important;
 }
-.button-toolbar,
-.button-category,
-.bookmark-bar button,
-#panel_switch,
-#switch button,
-#footer button {
+#browser.animation-on .button-toolbar,
+#browser.animation-on .button-category,
+#browser.animation-on .bookmark-bar button,
+#browser.animation-on #panel_switch,
+#browser.animation-on #switch button,
+#browser.animation-on #footer button {
     transition-delay: 0.1s !important;
 }
-.bookmark-bar button:hover {border: initial !important;}
-#browser.theme-light .button-toolbar:hover,
-#browser.theme-light .bookmark-bar button:hover {
-    background: var(--colorAccentBgFadedMore); !important;
+#browser.animation-on .bookmark-bar button:hover {border: initial !important;}
+/* --arc base */
+#browser.ui-transparent-tabs.color-behind-tabs-off.animation-on.theme-light.hi-dark.acc-light .button-toolbar:hover,
+#browser.ui-transparent-tabs.color-behind-tabs-off.animation-on.theme-light.hi-dark.acc-light .bookmark-bar button:hover {
+    background: var(--arcBaseButtonHover) !important;
 }
-#browser.theme-light.acc-dark.color-behind-tabs-on .button-toolbar:hover,
-#browser.theme-light.acc-dark.color-behind-tabs-on .bookmark-bar button:hover,
-#browser.theme-light.acc-dark.color-behind-tabs-on #footer button:hover {
-    background: var(--colorBgInverser);
+/* -- arc darker */
+#browser.ui-transparent-tabs.color-behind-tabs-on.theme-light.hi-dark.acc-dark .button-toolbar:hover,
+#browser.ui-transparent-tabs.color-behind-tabs-on.theme-light.hi-dark.acc-dark .bookmark-bar button:hover,
+#browser.ui-transparent-tabs.color-behind-tabs-on.theme-light.hi-dark.acc-dark #footer button:hover {
+    background: var(--arcDarkerButtonHover) !important;
 }
-#browser.theme-dark .button-toolbar:hover,
-#browser.theme-dark .bookmark-bar button:hover {
-    background: var(--colorAccentBgFaded) !important;
+/* --arc dark */
+#browser.ui-transparent-tabs.color-behind-tabs-off.theme-dark.hi-dark.acc-dark .button-toolbar:hover,
+#browser.ui-transparent-tabs.color-behind-tabs-off.theme-dark.hi-dark.acc-dark .bookmark-bar button:hover {
+    background: var(--arcDarkButtonHover) !important;
 }
 /* reset animations of buttons that aren't on toolbars */
 #panels .panel-group .panel .button-toolbar:hover,
@@ -74,17 +82,6 @@ body {
     background: var(--colorBg) !important;
     transition: initial !important;
     transition-delay: initial !important;
-}
-/* reduce white space above tabs */
-#tabs-container.top {padding-top: 4px;}
-.normal #tabs-container.top {padding-top: 5px !important;}
-/* reduce white space below tabs when tabs are bottom */
-.normal #tabs-container.bottom {padding-bottom: 5px !important;}
-.stacks-on #tabs-container.bottom {padding-bottom: 3px;}
-/* less obnoxious top border on bottom tabs */
-.address-top #tabs-container.bottom {
-    border-top-width: 1px;
-    border-color: rgba(23,27,35,0.1);
 }
 /* shadow above navigation bar */
 #tabs-container {box-shadow: inset 0 -10px 1.7px -10px rgba(0,0,0,0.2);}
@@ -104,6 +101,8 @@ body {
 }
 #browser:not(.tabs-top) .tab-position .tab.active {box-shadow: none;}
 #browser:not(.tabs-top).theme-dark .tab-position .tab.active {box-shadow: none;}
+/* tab hover color consistency */
+.theme-light.acc-dark .tab:hover {background: var(--arcSuperDarkBg) !important;}
 /* blue tab stack indicators */
 .tab-group-indicator {background: var(--colorBg);}
 .color-behind-tabs-on .tab-group-indicator {background: var(--colorAccentBg);}
@@ -112,66 +111,19 @@ body {
 .color-behind-tabs-on.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator {
     border-top: none;
     margin-bottom: -2px;
-    background-color: #5294e2 !important;
+    background-color: var(--arcHighlight) !important;
 }
-.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator:hover {background-color: #bcd6f5 !important;}
+.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator:hover {background-color: var(--arcHighlightest) !important;}
 .stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator.active,
 .stacks-on .tab-strip .tab.active .tab-group-indicator .tab-indicator.active,
 .stacks-on .tab-strip .tab:hover:not(.active) .tab-group-indicator .tab-indicator.active,
 .color-behind-tabs-on.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator.active {
-    background-color: #88B7F0 !important;
+    background-color: var(--arcHighlighter) !important;
 }
 .tabs-top.tabs-at-edge.maximized.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator.active {padding-bottom: 0;}
-/* no border radius on new tab button */
-.newtab:hover,.acc-dark.color-behind-tabs-on .newtab:hover {border-radius: 0;}
-.newtab svg {border-radius: 0 !important;}
-/* reduce white space between tabs and tab bin */
-.resize {
-    margin-right: -10px;
-    padding-right: 15px;
-}
-#browser:not(.tabs-top) .resize {
-    margin: 0;
-    padding-right: 0;
-}
-.sync-and-trash-container {
-    margin-left: -15px;
-    padding-left: 10px;
-}
-.toggle-trash {
-    margin: auto 10px auto -10px;
-    padding-left: 10px;
-}
-.synced-tabs-button {margin: auto 5px auto -10px;}
-#browser:not(.tabs-top) .toggle-trash {margin: -10px auto auto auto;}
-/* when tabs are not standard, merge address bar with header */
-#browser:not(.tabs-top) #titlebar {z-index: 1;}
-#browser:not(.tabs-top) #titlebar #pagetitle {display: none;}
-#browser:not(.tabs-top) #main {margin-top: -25px;}
-#browser:not(.tabs-top) .toolbar-addressbar {padding: 0 100px 0 35px;}
-#browser:not(.tabs-top) .vivaldi {top: 2px;}
-#browser.address-top.tabs-off .vivaldi {top: 5.5px;}
-/* when tabs are not standard and address bar is bottom, redisplay titlebar and reset address bar margins */
-#browser.address-off.tabs-off #header {display: flex;}
-#browser:not(.tabs-top).address-off #titlebar #pagetitle,
-#browser:not(.tabs-top).address-bottom #titlebar #pagetitle {
-    display: flex;
-}
-#browser:not(.tabs-off).address-off.bookmark-bar-top .toolbar-addressbar,
-#browser.address-off.tabs-off.bookmark-bar-top .toolbar-addressbar {
-    display: none;
-}
-#browser:not(.tabs-top).address-off #main,
-#browser:not(.tabs-top).address-bottom #main {
-    margin-top: 0;
-}
-#browser:not(.tabs-top).address-off .vivaldi,
-#browser:not(.tabs-top).address-bottom .vivaldi {
-    top: -2px;
-}
-#browser:not(.tabs-top).address-bottom .toolbar-addressbar {padding: 0;}
-/* remove from this line down to line 239 if you don't want to use arc's window buttons */
+/* remove from this line down to line 182 if you don't want to use arc's window buttons */
 /* better positioning on window buttons */
+/* linux */
 .linux .window-buttongroup {margin-top: 4.5px;}
 .linux .maximized .window-buttongroup {margin: initial;}
 .linux #browser:not(.tabs-top) .window-buttongroup {margin-top: 4px;}
@@ -180,6 +132,12 @@ body {
 .linux .window-minimize {margin-right: 5px !important;}
 .linux .window-maximize {margin-right: 5px !important;}
 .linux .window-close {margin-right: -7px !important;}
+/* windows */
+.win .window-buttongroup {margin-top: 9.4px;}
+.win #browser:not(.tabs-top) .window-buttongroup {margin-top: 4px;}
+.win #browser:not(.tabs-top).address-off .window-buttongroup,
+.win #browser:not(.tabs-top).address-bottom .window-buttongroup {margin-top: -1px;}
+.win .window-close {margin-right: -17px !important;}
 /* remove background on window buttons */
 .window-buttongroup button {
     width: 30px;
@@ -237,17 +195,14 @@ body {
 .acc-dark.isblurred .window-minimize,.theme-dark.isblurred .window-minimize {background: url('arc/titlebutton-minimize-backdrop-dark.png') no-repeat;}
 .acc-dark.isblurred .window-maximize,.theme-dark.isblurred .window-maximize {background: url('arc/titlebutton-maximize-backdrop-dark.png') no-repeat;}
 .acc-dark.isblurred .window-close,.theme-dark.isblurred .window-close {background: url('arc/titlebutton-close-backdrop-dark.png') no-repeat;}
-/* make expanded extensions wrapper blend better */
-.toolbar-addressbar .button-toolbar.browserAction-button {background-color: var(--colorAccentBg);}
-#browser.color-behind-tabs-on .toolbar-addressbar .button-toolbar.browserAction-button {background-color: var(--colorBg);}
 /* make small black border under address bar more subtle */
-.toolbar-addressbar.toolbar:after {background-color: rgba(23,27,35,0.2) !important;}
-.theme-dark .toolbar-addressbar.toolbar:after {background-color: rgba(23, 27, 35, 0.5) !important;}
+.toolbar-mainbar:after {background-color: rgba(35, 23, 23, 0.12) !important;}
+.theme-dark .toolbar-mainbar:after {background-color: rgba(23, 27, 35, 0.8) !important;}
 /* dark panel on all themes */
-#panel_switch,#switch {box-shadow: inset -1px 0 #353945 !important;}
-#panel_switch,#switch,#panels-container:after {background: #353945;}
+#panel_switch,#switch {box-shadow: inset -1px 0 var(--arcPanel) !important;}
+#panel_switch,#switch,#panels-container:after {background: var(--arcPanel);}
 #panels-container:after {border-right: 1px solid rgba(0,0,0,0.35) !important;}
-#panel_switch polygon,#switch button svg {fill: #d3dae3 !important;}
+#panel_switch polygon,#switch button svg {fill: var(--arcDarkText) !important;}
 #switch button.active svg {fill: var(--colorFg) !important;}
 #switch button.active,
 #switch button.active:hover {
@@ -256,54 +211,51 @@ body {
     border-style: inset none inset none;
 }
 .theme-dark #switch .webviewbtn img,#switch button {background: transparent !important;}
-#panel_switch:hover,#switch button:hover {background: #494D5A !important;}
-/* remove black border on panel button hover */
+#panel_switch:hover,#switch button:hover {background: var(--arcDarkButtonHover) !important;}
+/* remove border on panel button hover */
 #switch button:hover:not(:disabled):not(.active) {box-shadow: initial;}
-/* active tab in windows panel uses theme highlight color */
+/* active tab in windows panel always uses theme highlight color */
+.vivaldi-tree .title.active,
 .vivaldi-tree .tree-row[data-selected],
 .vivaldi-tree .tree-row[data-selected][data-nofocus] {
-    color: white;
-    background: var(--colorHighlightBg);
+    color: var(--white);
+    background: var(--arcHighlight) !important;
 }
-/* make speed dial navigation smaller */
-.startpage-navigation {min-height: 34px !important;}
-.button-startpage {box-shadow: none !important;}
-/* remove white left border in speed dial navigation */
-.startpage .startpage-navigation .startpage-navigation-group:last-of-type {border-left: none;}
 /* dark speed dial navigation unless light theme with light accent */
+.startpage .button-startpage {background-color: var(--transparent) !important;}
 .acc-dark button.button-startpage.active,
 .acc-dark .startpage .startpage-navigation,
 .theme-dark button.button-startpage.active,
 .theme-dark .startpage .startpage-navigation {
-    color: #cdd6db;
-    background: #353945;
+    color: var(--arcDarkText);
+    background: var(--arcDarkBg);
 }
 .acc-dark .startpage .startpage-navigation,
 .theme-dark .startpage .startpage-navigation {
-    box-shadow: inset 0 -2px 0 #2f343f;
+    box-shadow: inset 0 -2px 0 var(--arcDarkBg);
 }
-/* use arc colors for stats info overlay */
-#footer.footer > #status_info > span {
-    border: initial;
-    color: var(--colorFg);
-    background: initial;
-}
-#status_info > span {
-    border: 0;
-    color: #fff;
-    background: #5294e2;
+.startpage-navigation-group:before {display: none;}
+.acc-dark button.button-startpage:after {display: none;}
+.startpage .startpage-navigation .startpage-navigation-group:last-of-type {border-left: none;}
+/* use arc colors for status info overlay */
+.status-info {
+    border: 0 !important;
+    color: var(--white) !important;
+    background: var(--arcHighlight) !important;
 }
 /* use arc sidebar color in vivaldi's settings dialog */
-.button-category:hover {background: #494D5A !important;}
+.button-category.category-selected:hover {background: var(--colorBgLighter) !important;}
+.button-category:hover {background: var(--arcDarkButtonHover) !important;}
 .settings-search {
-    background: #292E39;
+    background: var(--arcSuperDarkBg);
     border-width: 0 !important;
 }
 .vivaldi-settings .settings-sidebar {
-    color: #d3dae3;
-    background: #353945 !important;
+    color: var(--arcDarkText);
+    background: var(--arcPanel) !important;
 }
-.vivaldi-settings .settings-sidebar svg {fill: #fff;}
+.vivaldi-settings .settings-sidebar .button-category.category-selected svg {fill: var(--arcPanel);}
+.vivaldi-settings .settings-sidebar svg {fill: var(--white);}
 .button-category:focus:not([tabindex='-1']),
 .button-category:focus:not([tabindex='-1']) svg,
 .settings-sidebar .settings-navigation .navigation-category.category-selected .button-category.category-full-selected,
@@ -331,5 +283,5 @@ body {
 }
 #browser ::-webkit-scrollbar-thumb:active {
     border: none !important;
-    background: #5294e2 !important;
+    background: var(--arcHighlight) !important;
 }

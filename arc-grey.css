@@ -7,7 +7,6 @@
     --arcGreySuperDarkBg: #1a1a1a;
     --arcGreyHighlight: #999999;
     --arcGreyHighlighter: #BBBBBB;
-    --arcHighlightest: #bcd6f5;
     --arcGreyDarkText: #dbdbdb;
     --arcGreyPanel: #333333;
     --arcGreyBaseButtonHover: #dcdcdc;
@@ -56,17 +55,19 @@ body {background-color: var(--arcGreyDarkBg) !important;}
 #browser.ui-transparent-tabs.color-behind-tabs-off.theme-dark.hi-dark.acc-dark .bookmark-bar button:hover {
     background: var(--arcGreyDarkButtonHover) !important;
 }
+/* tab hover color consistency */
+.theme-light.acc-dark .tab:hover {background: var(--arcGreySuperDarkBg);}
 /* tab stack indicators */
 .stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator,
 .color-behind-tabs-on.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator {
     background-color: var(--arcGreyHighlight) !important;
 }
-.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator:hover {background-color: #var(--arcGreyHighlighter) !important;}
+.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator:hover {background-color: var(--arcGreyHighlighter) !important;}
 .stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator.active,
 .stacks-on .tab-strip .tab.active .tab-group-indicator .tab-indicator.active,
 .stacks-on .tab-strip .tab:hover:not(.active) .tab-group-indicator .tab-indicator.active,
 .color-behind-tabs-on.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator.active {
-    background-color: #var(--arcGreyHighlighter) !important;
+    background-color: var(--arcGreyHighlighter) !important;
 }
 /* use arc sidebar color in vivaldi's settings dialog */
 .button-category.category-selected:hover {background: var(--colorBgFaded) !important;}

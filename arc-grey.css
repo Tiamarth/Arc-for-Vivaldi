@@ -1,17 +1,95 @@
 /* this css adds support for arc grey to AFV */
+:root {
+    --white: white;
+    --black: black;
+    --transparent: transparent;
+    --arcGreyDarkBg: #383838;
+    --arcGreySuperDarkBg: #1a1a1a;
+    --arcGreyHighlight: #999999;
+    --arcGreyHighlighter: #BBBBBB;
+    --arcHighlightest: #bcd6f5;
+    --arcGreyDarkText: #dbdbdb;
+    --arcGreyPanel: #333333;
+    --arcGreyBaseButtonHover: #dcdcdc;
+    --arcGreyDarkerButtonHover: #d1d1d1;
+    --arcGreyDarkButtonHover: #3d3d3d;
+}
 /* make splash use arc-grey bg color */
-body {background-color: #383838 !important;}
+body {background-color: var(--arcGreyDarkBg) !important;}
+/* button hover animations */
+#browser.animation-on .button-toolbar,
+#browser.animation-on .button-toolbar:hover,
+#browser.animation-on .button-category,
+#browser.animation-on .button-category:hover,
+#browser.animation-on .bookmark-bar button,
+#browser.animation-on .bookmark-bar button:hover,
+#browser.animation-on #panel_switch,
+#browser.animation-on #panel_switch:hover,
+#browser.animation-on #switch button,
+#browser.animation-on #switch button:hover,
+#browser.animation-on #footer button,
+#browser.animation-on #footer button:hover {
+    transition: 0.1s !important;
+}
+#browser.animation-on .button-toolbar,
+#browser.animation-on .button-category,
+#browser.animation-on .bookmark-bar button,
+#browser.animation-on #panel_switch,
+#browser.animation-on #switch button,
+#browser.animation-on #footer button {
+    transition-delay: 0.1s !important;
+}
+#browser.animation-on .bookmark-bar button:hover {border: initial !important;}
+/* --arc base */
+#browser.ui-transparent-tabs.color-behind-tabs-off.animation-on.theme-light.hi-dark.acc-light .button-toolbar:hover,
+#browser.ui-transparent-tabs.color-behind-tabs-off.animation-on.theme-light.hi-dark.acc-light .bookmark-bar button:hover {
+    background: var(--arcGreyBaseButtonHover) !important;
+}
+/* -- arc darker */
+#browser.ui-transparent-tabs.color-behind-tabs-on.theme-light.hi-dark.acc-dark .button-toolbar:hover,
+#browser.ui-transparent-tabs.color-behind-tabs-on.theme-light.hi-dark.acc-dark .bookmark-bar button:hover,
+#browser.ui-transparent-tabs.color-behind-tabs-on.theme-light.hi-dark.acc-dark #footer button:hover {
+    background: var(--arcGreyDarkerButtonHover) !important;
+}
+/* --arc dark */
+#browser.ui-transparent-tabs.color-behind-tabs-off.theme-dark.hi-dark.acc-dark .button-toolbar:hover,
+#browser.ui-transparent-tabs.color-behind-tabs-off.theme-dark.hi-dark.acc-dark .bookmark-bar button:hover {
+    background: var(--arcGreyDarkButtonHover) !important;
+}
 /* tab stack indicators */
 .stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator,
 .color-behind-tabs-on.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator {
-    background-color: #999999 !important;
+    background-color: var(--arcGreyHighlight) !important;
 }
-.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator:hover {background-color: #BBBBBB !important;}
+.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator:hover {background-color: #var(--arcGreyHighlighter) !important;}
 .stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator.active,
 .stacks-on .tab-strip .tab.active .tab-group-indicator .tab-indicator.active,
 .stacks-on .tab-strip .tab:hover:not(.active) .tab-group-indicator .tab-indicator.active,
 .color-behind-tabs-on.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator.active {
-    background-color: #BBBBBB !important;
+    background-color: #var(--arcGreyHighlighter) !important;
+}
+/* use arc sidebar color in vivaldi's settings dialog */
+.button-category.category-selected:hover {background: var(--colorBgFaded) !important;}
+.button-category:hover {background: var(--arcGreyDarkButtonHover) !important;}
+.settings-search {
+    background: var(--arcGreySuperDarkBg);
+    border-width: 0 !important;
+}
+.vivaldi-settings .settings-sidebar {
+    color: var(--arcDarkText);
+    background: var(--arcGreyPanel) !important;
+}
+.vivaldi-settings .settings-sidebar .button-category.category-selected svg {fill: var(--arcGreyPanel);}
+#browser.ui-transparent-tabs.color-behind-tabs-off.theme-dark.hi-dark.acc-dark .vivaldi-settings .settings-sidebar .button-category.category-selected svg {fill: var(--arcGreyDarkText);}
+.vivaldi-settings .settings-sidebar svg {fill: var(--white);}
+.button-category:focus:not([tabindex='-1']),
+.button-category:focus:not([tabindex='-1']) svg,
+.settings-sidebar .settings-navigation .navigation-category.category-selected .button-category.category-full-selected,
+.settings-sidebar .settings-navigation .navigation-category.category-selected .button-category.category-full-selected svg {
+    color: var(--colorFg);
+    fill: var(--colorHighlightBg);
+    background: var(--colorBgLightIntense) !important;
+    transition: initial !important;
 }
 /* scrollbar */
 #browser ::-webkit-scrollbar-thumb {background: rgba(13,13,13,0.35) !important;}
@@ -33,11 +111,8 @@ body {background-color: #383838 !important;}
     box-shadow: inset 0 -2px 0 #343434;
 }
 /* status info overlay */
-#status_info > span {background: #999999;}
-/* sidebar in settings dialog */
-.button-category:hover {background: #515151 !important;}
-.settings-search {background: #2C2C2C;}
-.vivaldi-settings .settings-sidebar {
-    color: #DBDBDB;
-    background: #3D3D3D !important;
+.status-info {
+    border: 0 !important;
+    color: var(--white) !important;
+    background: var(--arcGreyHighlight) !important;
 }

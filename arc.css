@@ -102,7 +102,7 @@ body {
 #browser:not(.tabs-top) .tab-position .tab.active {box-shadow: none;}
 #browser:not(.tabs-top).theme-dark .tab-position .tab.active {box-shadow: none;}
 /* tab hover color consistency */
-.theme-light.acc-dark .tab:hover {background: var(--arcSuperDarkBg) !important;}
+.theme-light.acc-dark .tab:hover {background: var(--arcSuperDarkBg);}
 /* blue tab stack indicators */
 .tab-group-indicator {background: var(--colorBg);}
 .color-behind-tabs-on .tab-group-indicator {background: var(--colorAccentBg);}

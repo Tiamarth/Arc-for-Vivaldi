@@ -1,4 +1,6 @@
-/* this css adds support for arc grey to AFV */
+/* this css adds support for arc grey to AFV
+ * https://github.com/Tiamarth/Arc-for-Vivaldi
+ */
 :root {
     --arcGreyDarkBg: #383838;
     --arcGreySuperDarkBg: #1a1a1a;

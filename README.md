@@ -10,7 +10,6 @@ Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc](htt
 - Use Arc's sidebar color even on light themes, unless using the opera panel addon
 - Use Arc's toolbar color for start page navigation
 - Remove Vivaldi's ugly header gradient
-- 1px border around Vivaldi that persists even when Native Window is disabled in the settings
 - Optionally integrate with [Arc Grey](https://github.com/eti0/arc-grey-theme) instead of vanilla Arc
 
 ## Installation

@@ -66,6 +66,7 @@ body {
     background: var(--arcBaseButtonHover) !important;
 }
 /* -- arc darker */
+#browser.ui-transparent-tabs.color-behind-tabs-on.theme-light.hi-dark.acc-dark #tabs-container .button-toolbar:hover {background: var(--arcSuperDarkBg) !important;}
 #browser.ui-transparent-tabs.color-behind-tabs-on.theme-light.hi-dark.acc-dark .button-toolbar:hover,
 #browser.ui-transparent-tabs.color-behind-tabs-on.theme-light.hi-dark.acc-dark .bookmark-bar button:hover,
 #browser.ui-transparent-tabs.color-behind-tabs-on.theme-light.hi-dark.acc-dark #footer button:hover {
@@ -121,7 +122,7 @@ body {
     background-color: var(--arcHighlighter) !important;
 }
 .tabs-top.tabs-at-edge.maximized.stacks-on .tab-strip .tab .tab-group-indicator .tab-indicator.active {padding-bottom: 0;}
-/* remove from this line down to line 182 if you don't want to use arc's window buttons */
+/* remove from this line down to line 198 if you don't want to use arc's window buttons */
 /* better positioning on window buttons */
 /* linux */
 .linux .window-buttongroup {margin-top: 4.5px;}

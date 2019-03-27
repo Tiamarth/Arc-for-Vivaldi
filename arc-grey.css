@@ -1,8 +1,5 @@
 /* this css adds support for arc grey to AFV */
 :root {
-    --white: white;
-    --black: black;
-    --transparent: transparent;
     --arcGreyDarkBg: #383838;
     --arcGreySuperDarkBg: #1a1a1a;
     --arcGreyHighlight: #999999;
@@ -45,6 +42,7 @@ body {background-color: var(--arcGreyDarkBg) !important;}
     background: var(--arcGreyBaseButtonHover) !important;
 }
 /* -- arc darker */
+#browser.ui-transparent-tabs.color-behind-tabs-on.theme-light.hi-dark.acc-dark #tabs-container .button-toolbar:hover {background: var(--arcGreySuperDarkBg) !important;}
 #browser.ui-transparent-tabs.color-behind-tabs-on.theme-light.hi-dark.acc-dark .button-toolbar:hover,
 #browser.ui-transparent-tabs.color-behind-tabs-on.theme-light.hi-dark.acc-dark .bookmark-bar button:hover,
 #browser.ui-transparent-tabs.color-behind-tabs-on.theme-light.hi-dark.acc-dark #footer button:hover {

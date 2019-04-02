@@ -195,9 +195,6 @@ body {
 .acc-dark.isblurred .window-minimize,.theme-dark.isblurred .window-minimize {background: url('arc/titlebutton-minimize-backdrop-dark.png') no-repeat;}
 .acc-dark.isblurred .window-maximize,.theme-dark.isblurred .window-maximize {background: url('arc/titlebutton-maximize-backdrop-dark.png') no-repeat;}
 .acc-dark.isblurred .window-close,.theme-dark.isblurred .window-close {background: url('arc/titlebutton-close-backdrop-dark.png') no-repeat;}
-/* make small black border under address bar more subtle */
-.toolbar-mainbar:after {background-color: rgba(35, 23, 23, 0.12) !important;}
-.theme-dark .toolbar-mainbar:after {background-color: rgba(23, 27, 35, 0.8) !important;}
 /* dark panel on all themes */
 #panel_switch,#switch {box-shadow: inset -1px 0 var(--arcPanel) !important;}
 #panel_switch,#switch,#panels-container:after {background: var(--arcPanel);}

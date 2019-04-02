@@ -214,13 +214,6 @@ body {
 #panel_switch:hover,#switch button:hover {background: var(--arcDarkButtonHover) !important;}
 /* remove border on panel button hover */
 #switch button:hover:not(:disabled):not(.active) {box-shadow: initial;}
-/* active tab in windows panel always uses theme highlight color */
-.vivaldi-tree .title.active,
-.vivaldi-tree .tree-row[data-selected],
-.vivaldi-tree .tree-row[data-selected][data-nofocus] {
-    color: var(--white);
-    background: var(--arcHighlight) !important;
-}
 /* dark speed dial navigation unless light theme with light accent */
 .startpage .button-startpage {background-color: var(--transparent) !important;}
 .acc-dark button.button-startpage.active,

@@ -1,18 +1,8 @@
 # Arc-for-Vivaldi  
 
-Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc](https://github.com/NicoHood/arc-theme) (or [Arc Grey](https://github.com/eti0/arc-grey-theme)), a popular GTK theme.
+Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc](https://github.com/NicoHood/arc-theme) (or [Arc Grey](https://github.com/eti0/arc-grey-theme)), a popular GTK theme. Optionally integrate with [Arc Grey](https://github.com/eti0/arc-grey-theme) instead of vanilla Arc.
 
 User [drakkar1969](https://github.com/drakkar1969) forked this skin and rewrote most of the code. You might like his fork more than mine, find find his fork [here](https://github.com/drakkar1969/Arc-for-Vivaldi)
-
-## Features:
-
-- Use Arc's window buttons even when Native Window is disabled in the settings
-- Make tab stack indicators Arc-blue, like running application indicators
-- Use Arc's scrollbars
-- Use Arc's sidebar color even on light themes, unless using the opera panel addon
-- Use Arc's toolbar color for start page navigation
-- Remove Vivaldi's ugly header gradient
-- Optionally integrate with [Arc Grey](https://github.com/eti0/arc-grey-theme) instead of vanilla Arc
 
 ## Installation
 

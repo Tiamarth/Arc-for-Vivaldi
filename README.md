@@ -50,8 +50,11 @@ If you want to **use the Arc window buttons** instead of Vivaldi's default windo
 
 **Need more help?** Get in touch!
 - add me on Discord: Tiamarth#6729
+- join my [Discord server](https://discord.gg/ZfDP2ZV)
 - [Create an issue here on GitHub](https://github.com/Tiamarth/Arc-for-Vivaldi/issues/new)
-- [Email me](mailto:tiabusy@gmail.com)
+- [Email me](mailto:jontiamac@gmail.com)
+
+Don't email me unless the other methods fail for some reason. Email is not a great way to contact me.
 
 ## Screenshots:
 

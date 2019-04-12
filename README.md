@@ -1,11 +1,9 @@
 # Arc-for-Vivaldi  
-
 Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc](https://github.com/NicoHood/arc-theme) (or [Arc Grey](https://github.com/eti0/arc-grey-theme)), a popular GTK theme. Optionally integrate with [Arc Grey](https://github.com/eti0/arc-grey-theme) instead of vanilla Arc.
 
 User [drakkar1969](https://github.com/drakkar1969) forked this skin and rewrote most of the code. You might like his fork more than mine, find find his fork [here](https://github.com/drakkar1969/Arc-for-Vivaldi)
 
 ## Installation
-
 First, find `style` in your Vivaldi install directory. It should be in the following places depending on your platform:
 
 **Linux:** `/opt/vivaldi/resources/vivaldi/style`  
@@ -48,17 +46,13 @@ If you want to **use the Arc window buttons** instead of Vivaldi's default windo
 | [x] Transparent Tabs             | [x] Transparent Tabs             | [x] Transparent Tabs             |
 | Corner Rounding: 2px             | Corner Rounding: 2px             | Corner Rounding: 2px             |
 
+## Screenshots:
+Imgur Album: https://imgur.com/a/jMSWq
+
 **Need more help?** Get in touch!
-- add me on Discord: Tiamarth#6729
 - join my [Discord server](https://discord.gg/ZfDP2ZV)
 - [Create an issue here on GitHub](https://github.com/Tiamarth/Arc-for-Vivaldi/issues/new)
 - [Email me](mailto:jontiamac@gmail.com)
-
-Don't email me unless the other methods fail for some reason. Email is not a great way to contact me.
-
-## Screenshots:
-
-Imgur Album: https://imgur.com/a/jMSWq
 
 ----
 

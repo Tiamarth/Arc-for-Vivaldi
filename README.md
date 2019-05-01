@@ -1,7 +1,9 @@
 # Arc-for-Vivaldi  
 Arc for Vivaldi is a custom css file that integrates Vivaldi's UI with [Arc](https://github.com/NicoHood/arc-theme) (or [Arc Grey](https://github.com/eti0/arc-grey-theme)), a popular GTK theme. Optionally integrate with [Arc Grey](https://github.com/eti0/arc-grey-theme) instead of vanilla Arc.
 
-User [drakkar1969](https://github.com/drakkar1969) forked this skin and rewrote most of the code. You might like his fork more than mine, find find his fork [here](https://github.com/drakkar1969/Arc-for-Vivaldi)
+User [drakkar1969](https://github.com/drakkar1969) forked this skin and almost completely rewrote it. You might like his fork more than mine, find his fork [here](https://github.com/drakkar1969/Arc-for-Vivaldi)
+
+**Note:** drakkar's css is much nicer and more customizable than mine, and he changed way more of the interface than I did. Moreover he's more active in updating his fork than I am in updating this. My time is mostly being focused on other projects nowadays, especially [Isabella.](https://github.com/isabella-theme) I'll still maintain Arc for Vivaldi until drakkar's fork gets enough attention to replace it, and I will help with issues if you find any. However I highly recommend you switch to drakkar's fork because I don't even use Arc or this skin anymore, and [am working on a new one.](https://github.com/isabella-theme/isabella-vivaldi) Sorry for any inconvenience.
 
 ## Installation
 First, find `style` in your Vivaldi install directory. It should be in the following places depending on your platform:

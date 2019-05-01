@@ -156,95 +156,95 @@ body {
 .isblurred #browser .window-buttongroup img {opacity: 0.3;}
 /* hide default window buttons svgs */
 .window-buttongroup svg {display: none;}
-/* apply isabella window buttons */
+/* apply arc window buttons */
 .window-minimize {
-    background: url('isabella-buttons/titlebutton-minimize.png') no-repeat !important;
+    background: url('arc/titlebutton-minimize.png') no-repeat !important;
 }
 .window-minimize:hover {
-    background: url('isabella-buttons/titlebutton-minimize-hover.png') no-repeat !important;
+    background: url('arc/titlebutton-minimize-hover.png') no-repeat !important;
 }
 .window-minimize:hover:active {
-    background: url('isabella-buttons/titlebutton-minimize-active.png') no-repeat !important;
+    background: url('arc/titlebutton-minimize-active.png') no-repeat !important;
 }
 .window-maximize {
-    background: url('isabella-buttons/titlebutton-maximize.png') no-repeat !important;
+    background: url('arc/titlebutton-maximize.png') no-repeat !important;
 }
 .window-maximize:hover {
-    background: url('isabella-buttons/titlebutton-maximize-hover.png') no-repeat !important;
+    background: url('arc/titlebutton-maximize-hover.png') no-repeat !important;
 }
 .window-maximize:hover:active {
-    background: url('isabella-buttons/titlebutton-maximize-active.png') no-repeat !important;
+    background: url('arc/titlebutton-maximize-active.png') no-repeat !important;
 }
 .window-close {
-    background: url('isabella-buttons/titlebutton-close.png') no-repeat !important;
+    background: url('arc/titlebutton-close.png') no-repeat !important;
 }
 .window-close:hover {
-    background: url('isabella-buttons/titlebutton-close-hover.png') no-repeat !important;
+    background: url('arc/titlebutton-close-hover.png') no-repeat !important;
 }
 .window-close:hover:active {
-    background: url('isabella-buttons/titlebutton-close-active.png') no-repeat !important;
+    background: url('arc/titlebutton-close-active.png') no-repeat !important;
 }
 /* on dark theme and dark accent behind tabs */
 .acc-dark.color-behind-tabs-on .window-minimize,.theme-dark .window-minimize {
-    background: url('isabella-buttons/titlebutton-minimize-dark.png') no-repeat !important;
+    background: url('arc/titlebutton-minimize-dark.png') no-repeat !important;
 }
 .acc-dark.color-behind-tabs-on .window-minimize:hover,
 .theme-dark .window-minimize:hover {
-    background: url('isabella-buttons/titlebutton-minimize-hover-dark.png') no-repeat !important;
+    background: url('arc/titlebutton-minimize-hover-dark.png') no-repeat !important;
 }
 .theme-dark .window-minimize:hover:active,
 .acc-dark.color-behind-tabs-on .window-minimize:hover:active {
-    background: url('isabella-buttons/titlebutton-minimize-active-dark.png') no-repeat !important;
+    background: url('arc/titlebutton-minimize-active-dark.png') no-repeat !important;
 }
 .acc-dark.color-behind-tabs-on .window-maximize,.theme-dark .window-maximize {
-    background: url('isabella-buttons/titlebutton-maximize-dark.png') no-repeat !important;
+    background: url('arc/titlebutton-maximize-dark.png') no-repeat !important;
 }
 .acc-dark.color-behind-tabs-on .window-maximize:hover,
 .theme-dark .window-maximize:hover {
-    background: url('isabella-buttons/titlebutton-maximize-hover-dark.png') no-repeat !important;
+    background: url('arc/titlebutton-maximize-hover-dark.png') no-repeat !important;
 }
 .theme-dark .window-maximize:hover:active,
 .acc-dark.color-behind-tabs-on .window-maximize:hover:active {
-    background: url('isabella-buttons/titlebutton-maximize-active-dark.png') no-repeat !important;
+    background: url('arc/titlebutton-maximize-active-dark.png') no-repeat !important;
 }
 .acc-dark.color-behind-tabs-on .window-close,.theme-dark .window-close {
-    background: url('isabella-buttons/titlebutton-close-dark.png') no-repeat !important;
+    background: url('arc/titlebutton-close-dark.png') no-repeat !important;
 }
 .acc-dark.color-behind-tabs-on .window-close:hover,
 .theme-dark .window-close:hover {
-    background: url('isabella-buttons/titlebutton-close-hover-dark.png') no-repeat !important;
+    background: url('arc/titlebutton-close-hover-dark.png') no-repeat !important;
 }
 .theme-dark .window-close:hover:active,
 .acc-dark.color-behind-tabs-on .window-close:hover:active {
-    background: url('isabella-buttons/titlebutton-close-active-dark.png') no-repeat !important;
+    background: url('arc/titlebutton-close-active-dark.png') no-repeat !important;
 }
 /* on light theme dark accent behind tabs when tabs aren't at the top of the window */
 #browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-minimize {
-    background: url('isabella-buttons/titlebutton-minimize.png') no-repeat !important;
+    background: url('arc/titlebutton-minimize.png') no-repeat !important;
 }
 #browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-minimize:hover {
-    background: url('isabella-buttons/titlebutton-minimize-hover.png') no-repeat !important;
+    background: url('arc/titlebutton-minimize-hover.png') no-repeat !important;
 }
 #browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-minimize:hover:active {
-    background: url('isabella-buttons/titlebutton-minimize-active.png') no-repeat !important;
+    background: url('arc/titlebutton-minimize-active.png') no-repeat !important;
 }
 #browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-maximize {
-    background: url('isabella-buttons/titlebutton-maximize.png') no-repeat !important;
+    background: url('arc/titlebutton-maximize.png') no-repeat !important;
 }
 #browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-maximize:hover {
-    background: url('isabella-buttons/titlebutton-maximize-hover.png') no-repeat !important;
+    background: url('arc/titlebutton-maximize-hover.png') no-repeat !important;
 }
 #browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-maximize:hover:active {
-    background: url('isabella-buttons/titlebutton-maximize-active.png') no-repeat !important;
+    background: url('arc/titlebutton-maximize-active.png') no-repeat !important;
 }
 #browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-close {
-    background: url('isabella-buttons/titlebutton-close.png') no-repeat !important;
+    background: url('arc/titlebutton-close.png') no-repeat !important;
 }
 #browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-close:hover {
-    background: url('isabella-buttons/titlebutton-close-hover.png') no-repeat !important;
+    background: url('arc/titlebutton-close-hover.png') no-repeat !important;
 }
 #browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-close:hover:active {
-    background: url('isabella-buttons/titlebutton-close-active.png') no-repeat !important;
+    background: url('arc/titlebutton-close-active.png') no-repeat !important;
 }
 /* dark panel on all themes */
 #panel_switch,#switch {box-shadow: inset -1px 0 var(--arcPanel) !important;}
